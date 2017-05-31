@@ -2,4 +2,9 @@
 *.xtc
 *.pdb
 *.pyc
+*.pickl
 
+
+*.db
+
+Model_Functions/\.ipynb_checkpoints/
