@@ -1,9 +1,10 @@
-from mdtraj import compute_distances, baker_hubbard
+from mdtraj import compute_distances, baker_hubbard, join
 from msmbuilder.feature_extraction import Featurizer
 
 
 class HBondFeaturizer(Featurizer):
-    def __init__(self, freq=0.1, exclude_water=True, periodic=True, sidechain_only=False, indices=[]):
+    def __init__(self, freq=0.01, exclude_water=True, periodic=True, sidechain_only=False, indices=None):
+        #TODO Add description
         '''Parameters:	
         freq = float, default 0.1, returns the Hbonds that occur in greater this fraction of the frames in the traj
         exclude_water = bool, default True
@@ -18,12 +19,12 @@ class HBondFeaturizer(Featurizer):
         self.sidechain_only = sidechain_only
         self.indices = indices
 
-    def fit(self, ):
+    def fit(self,traj_list, y=None):
+        all_trajs = join(traj_list)
+        indices = baker_hubbard(all_trajs, freq=self.freq, exclude_water=self.exclude_water, periodic=self.periodic,
+                             sidechain_only=self.sidechain_only)
+        self.indices = indices[:, 1:]
 
     def partial_transform(self, traj):
-        f = md.baker_hubbard(traj, freq=self.freq, exclude_water=self.exclude_water, periodic=self.periodic,
-                             sidechain_only=self.sidechain_only)
-        # TODO need to use the same indicies for each trajectory.
-        Hbond_pairs = f[:, -2:]
-        result = md.compute_distances(traj, Hbond_pairs, periodic=self.periodic, opt=True)
+        result = compute_distances(traj, self.indices, periodic=self.periodic, opt=True)
         return result
