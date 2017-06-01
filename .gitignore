@@ -8,3 +8,5 @@
 *.db
 
 Model_Functions/\.ipynb_checkpoints/
+
+*.npy
