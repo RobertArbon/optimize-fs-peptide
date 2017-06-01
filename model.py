@@ -2,11 +2,35 @@
 from sklearn.pipeline import Pipeline
 from msmbuilder.feature_extraction import DihedralFeaturizer, ContactFeaturizer
 from msmbuilder.feature_selection import FeatureSelector, VarianceThreshold
+from msmbuilder.preprocessing import RobustScaler
 from msmbuilder.decomposition import tICA
 from msmbuilder.cluster import MiniBatchKMeans
 from msmbuilder.msm import MarkovStateModel
+from msmbuilder.io import save_generic
 
+# The data will be loaded with a stride of 10 frames.  Each fame is 50ps, so the time per frame will be
+# 500ps/frame or 0.5ns/frame.
+# Each trajectory is 1000 frames long
+# Lag time will be 40 (20 ns) frames based on a visual inspection of /Misc/MSM_lag_time.ipynb
+to_ns = 0.5
+msm_lag = int(40/to_ns)
 
+# [‘phi’, ‘psi’, ‘omega’, ‘chi1’, ‘chi2’, ‘chi3’, ‘chi4’]
+
+feats = [('backbone_dihed', DihedralFeaturizer(types=['phi', 'psi', 'omega'])),
+        ('residues_dihed', DihedralFeaturizer(types=['chi1', 'chi2', 'chi3', 'chi4'])),
+        ('contacts', ContactFeaturizer())]
+
+features = FeatureSelector(features=feats)
+
+pipe = Pipeline([('features', features),
+                 ('variance_cut', VarianceThreshold()),
+                 ('scaling', RobustScaler())
+                 ('tica', tICA()),
+                 ('cluster', MiniBatchKMeans()),
+                 ('msm', MarkovStateModel(lag_time=msm_lag))])
+
+save_generic(pipe, 'model.pickl')
 
 
 
