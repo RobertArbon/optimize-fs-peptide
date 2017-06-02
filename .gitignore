@@ -3,12 +3,7 @@
 *.pdb
 *.pyc
 *.pickl
-
-
 *.db
-
 Model_Functions/\.ipynb_checkpoints/
-
 *.npy
-
 Misc/\.ipynb_checkpoints/
