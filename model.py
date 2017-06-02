@@ -25,10 +25,10 @@ features = FeatureSelector(features=feats)
 
 pipe = Pipeline([('features', features),
                  ('variance_cut', VarianceThreshold()),
-                 ('scaling', RobustScaler())
-                 ('tica', tICA()),
+                 ('scaling', RobustScaler()),
+                 ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
-                 ('msm', MarkovStateModel(lag_time=msm_lag))])
+                 ('msm', MarkovStateModel(lag_time=msm_lag, verbose=False))])
 
 save_generic(pipe, 'model.pickl')
 

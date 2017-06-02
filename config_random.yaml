@@ -1,0 +1,69 @@
+# osprey configuration file.
+#---------------------------
+# usage:
+#  osprey worker config.yaml
+
+estimator:
+    pickle: model.pickl
+
+strategy:
+    name: random
+
+search_space:
+  features__which_feat:
+    choices:
+      - ['backbone_dihed']
+      - ['residues_dihed']
+      - ['contacts']
+      - ['backbone_dihed', 'residues_dihed']
+      - ['backbone_dihed', 'contacts']
+      - ['residues_dihed', 'contacts']
+      - ['backbone_dihed', 'residues_dihed', 'contacts']
+    type: enum
+
+  tica__lag_time:
+    # 0.5 ns/frame.  500ns long trajectories.
+    # so lag times are 1ns - 250ns
+    min: 2
+    max: 500
+    num: 250
+    type: jump
+    var_type: int
+
+  tica__n_components:
+    min: 1
+    max: 10
+    type: int
+
+  cluster__n_clusters:
+    # 100, 120, 140...
+    min: 100 
+    max: 500
+    num: 21
+    type: jump
+    var_type: int
+
+  msm__n_timescales:
+    min: 1
+    max: 10
+    type: int
+
+cv:
+    name: shufflesplit
+    params:
+      n_splits: 5
+      test_size: 0.5
+      random_state: 42
+
+dataset_loader:
+  # specification of the dataset on which to train the models.
+  name: mdtraj
+  params:
+    trajectories: ./Data/trajs/trajectory-*.xtc
+    topology: ./Data/trajs/fs-peptide.pdb
+    stride: 10
+
+
+trials:
+  uri: sqlite:///osprey_test.db
+  project_name: name
