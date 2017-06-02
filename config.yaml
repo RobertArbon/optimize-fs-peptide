@@ -1,0 +1,92 @@
+# osprey configuration file.
+#---------------------------
+# usage:
+#  osprey worker config.yaml
+
+estimator:
+    # The model/estimator to be fit.
+
+    # pick one of these ways to specify
+      # path to a file
+    # pickle: my-model.pkl
+      # importable python class/instances
+    # entry_point: msmbuilder.decomposition.tICA
+    eval: |
+        #Pipeline([('featurizer', FeatureSelector(features=[('backbone_dihed', DihedralFeaturizer(types=['phi', 'psi'])),
+        #                                                ('residues_dihed', DihedralFeaturizer(types=['chi1', 'chi2', 'chi3', 'chi4'])),
+        #                                                ])),
+        #           ('variance_cut', VarianceThreshold()),
+        #           ('scaling', RobustScaler()),
+        #           ('tica', tICA(kinetic_mapping=True)),
+        #           ('cluster', MiniBatchKMeans()),
+        #           ('msm', MarkovStateModel(lag_time=80, verbose=False))])
+        Pipeline([
+                ('featurizer', DihedralFeaturizer(types=['phi', 'psi'])),
+                ('tica', tICA(n_components=2)),
+                ('cluster', MiniBatchKMeans()),
+                ('msm', MarkovStateModel(n_timescales=2, verbose=False)),
+        ])
+
+
+    # for eval, a python package containing the estimator definitions
+    eval_scope: msmbuilder
+
+
+strategy:
+    # the search section specifies the space of hyperparameters to search over
+    # and the strategy for doing so
+
+    # hyperopt's tree of parzen estimators http://hyperopt.github.io/hyperopt/
+    # and random search are curently supported.
+    name: random  # or gp, hyperopt_tpe
+    #params: {}
+
+search_space:
+  # the search space is specified by listing the variables you want to
+  # optimize over and their bounds for float and int typed variables,
+  # or the possible choices for enumeration-typed variables.
+  featurizer__types:
+    choices:
+     # - ['backbone_dihed']
+     # - ['residues_dihed']
+     # - ['backbone_dihed', 'residues_dihed']
+       - ['phi', 'psi']
+       - ['phi', 'psi', 'chi1']
+    type: enum
+
+  cluster__n_clusters:
+    min: 100
+    max: 500
+    type: int       # from 10 to 100 (with inclusive endpoints)
+
+  tica__lag_time:
+    min: 100
+    max: 400
+    type: int
+
+cv:
+    name: shufflesplit
+    params:
+      n_iter: 5
+      test_size: 0.5
+      random_state: 42
+
+dataset_loader:
+  # specification of the dataset on which to train the models.
+  name: mdtraj
+  params:
+    trajectories: ./Data/trajs/trajectory-*.xtc
+    topology: ./Data/trajs/fs-peptide.pdb
+    stride: 10
+
+
+trials:
+  # path to a databse in which the results of each hyperparameter fit
+  # are stored any SQL database is suppoted, but we recommend using
+  # SQLLite, which is simple and stores the results in a file on disk.
+  # the string format for connecting to other database is described here:
+  # http://docs.sqlalchemy.org/en/rel_0_9/core/engines.html#database-urls
+  uri: sqlite:///osprey_test.db
+  # if you want to save n > 1 projects in the same DB file, you can set
+  # `project_name` to distringuish them:
+  # project_name: name

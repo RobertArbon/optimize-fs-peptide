@@ -4,7 +4,17 @@
 #  osprey worker config.yaml
 
 estimator:
-    pickle: model.pickl
+#    pickle: model.pickl
+    eval: |
+        Pipeline([('features', FeatureSelector(features=[('backbone_dihed', DihedralFeaturizer(types=['phi', 'psi'])),
+                                                        ('residues_dihed', DihedralFeaturizer(types=['chi1', 'chi2', 'chi3', 'chi4'])),
+                                                        ('contacts', ContactFeaturizer())])),
+                   ('variance_cut', VarianceThreshold()),
+                   ('scaling', RobustScaler()),
+                   ('tica', tICA(kinetic_mapping=True)),
+                   ('cluster', MiniBatchKMeans()),
+                   ('msm', MarkovStateModel(lag_time=80, verbose=False))])
+    eval_scope: msmbuilder
 
 strategy:
     name: random
@@ -66,4 +76,4 @@ dataset_loader:
 
 trials:
   uri: sqlite:///osprey_test.db
-  project_name: name
+  #project_name: name

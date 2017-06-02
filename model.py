@@ -7,6 +7,9 @@ from msmbuilder.decomposition import tICA
 from msmbuilder.cluster import MiniBatchKMeans
 from msmbuilder.msm import MarkovStateModel
 from msmbuilder.io import save_generic
+from sklearn.base import clone, BaseEstimator
+from six import iteritems
+
 
 # The data will be loaded with a stride of 10 frames.  Each fame is 50ps, so the time per frame will be
 # 500ps/frame or 0.5ns/frame.
@@ -17,20 +20,27 @@ msm_lag = int(40/to_ns)
 
 # [‘phi’, ‘psi’, ‘omega’, ‘chi1’, ‘chi2’, ‘chi3’, ‘chi4’]
 
-feats = [('backbone_dihed', DihedralFeaturizer(types=['phi', 'psi', 'omega'])),
+feats = [('backbone_dihed', DihedralFeaturizer(types=['phi', 'psi'])),
         ('residues_dihed', DihedralFeaturizer(types=['chi1', 'chi2', 'chi3', 'chi4'])),
         ('contacts', ContactFeaturizer())]
 
-features = FeatureSelector(features=feats)
+featurizer = FeatureSelector(features=feats)
 
-pipe = Pipeline([('features', features),
+pipe = Pipeline([('features', featurizer),
                  ('variance_cut', VarianceThreshold()),
                  ('scaling', RobustScaler()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
                  ('msm', MarkovStateModel(lag_time=msm_lag, verbose=False))])
 
-save_generic(pipe, 'model.pickl')
+params = pipe.get_params()
+
+params = dict((k, v) for k, v in iteritems(params)
+              if not isinstance(v, BaseEstimator) and
+              (k != 'steps'))
+for k, v in iteritems(params):
+    print(k, v)
+# save_generic(pipe, 'model.pickl')
 
 
 
