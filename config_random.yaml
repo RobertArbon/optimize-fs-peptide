@@ -23,10 +23,10 @@ search_space:
 
   tica__lag_time:
     # 0.5 ns/frame.  500ns long trajectories.
-    # so lag times are 1ns - 250ns
+    # so lag times are 1ns - 251ns: 1, 11, 21, etc.
     min: 2
-    max: 500
-    num: 250
+    max: 502
+    num: 26
     type: jump
     var_type: int
 
@@ -51,7 +51,7 @@ search_space:
 cv:
     name: shufflesplit
     params:
-      n_splits: 5
+      n_iter: 5
       test_size: 0.5
       random_state: 42
 
