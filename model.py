@@ -33,14 +33,7 @@ pipe = Pipeline([('features', featurizer),
                  ('cluster', MiniBatchKMeans()),
                  ('msm', MarkovStateModel(lag_time=msm_lag, verbose=False))])
 
-params = pipe.get_params()
-
-params = dict((k, v) for k, v in iteritems(params)
-              if not isinstance(v, BaseEstimator) and
-              (k != 'steps'))
-for k, v in iteritems(params):
-    print(k, v)
-# save_generic(pipe, 'model.pickl')
+save_generic(pipe, 'model.pickl')
 
 
 
