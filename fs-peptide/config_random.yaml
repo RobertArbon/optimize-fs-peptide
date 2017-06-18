@@ -1,6 +1,5 @@
 # osprey configuration file.
 
-
 estimator:
     pickle: model.pickl
 
@@ -10,37 +9,45 @@ strategy:
 search_space:
   features__which_feat:
     choices:
-
+        - ['superposed']
+        - ['hb_pairs']
+        - ['pp_tor']
+        - ['ppo_tor']
+        - ['chi_tor']
+        - ['all_tor']
+        - ['alpha_angle']
+        - ['kappa_angle']
+        - ['ca_cont']
+        - ['close_cont']
+        - ['close-h_cont']
+        - ['raw_pos']
+        - ['drid']
+        - ['ff_bb_ang']
+        - ['ff_re_ang']
+        - ['ff_all_ang']
     type: enum
 
   tica__lag_time:
     # 0.5 ns/frame.  500ns long trajectories.
-    # so lag times are 1ns - 251ns: 1, 11, 21, etc.
     min: 2
-    max: 502
-    num: 26
-    type: jump
-    var_type: int
+    max: 999
+    type: int
 
   tica__n_components:
     min: 1
-    max: 20
+    max: 10
     type: int
 
   cluster__n_clusters:
-    # 100, 120, 140...
-    min: 100 
-    max: 500
-    num: 21
-    type: jump
-    var_type: int
+    min: 10
+    max: 1000
+
 
 cv:
     name: shufflesplit
     params:
       n_iter: 5
       test_size: 0.5
-      random_state: 42
 
 dataset_loader:
   # specification of the dataset on which to train the models.

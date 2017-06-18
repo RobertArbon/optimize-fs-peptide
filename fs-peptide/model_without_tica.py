@@ -38,31 +38,15 @@ all_idx = np.load('indices_all.npy')
 #
 # OTHER PARAMETERS
 #
-ref_traj = md.load('../Data/fs_peptide/trajectory-1.xtc', top='../Data/fs_peptide/fs-peptide.pdb')
+ref_traj = md.load('../Data/data/trajectory-1.xtc', top='../Data/data/fs-peptide.pdb')
 
-#
-# FEATURES
-#
-# Put all the features here but only select one at a time.  Specify variables to be optimized in config file only.
-# Not including bonds as they are contstrained
-# All features must be vector quantities to allow tICA
 
-feats = [('superposed', SuperposeFeaturizer(atom_indices=all_idx, reference_traj=ref_traj)),
-         ('rmsd', RMSDFeaturizer(reference_traj=ref_traj[0], atom_indices=all_idx)),
-         ('kern-rmsd', LandMarkRMSDFeaturizer(reference_traj=ref_traj[0], atom_indices=all_idx, sigma=1)),
-         ('')
-         ('pp_tor', DihedralFeaturizer(types=['phi', 'psi'])),
-         ('ppo_tor', DihedralFeaturizer(types=['phi', 'psi', 'omega'])),
-         ('chi_tor', DihedralFeaturizer(types=['chi1', 'chi2', 'chi3', 'chi4'])),
-         ('contacts', ContactFeaturizer()),
-         ]
 
 featurizer = FeatureSelector(features=feats)
 
 pipe = Pipeline([('features', featurizer),
                  ('variance_cut', VarianceThreshold()),
                  ('scaling', RobustScaler()),
-                 ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
                  ('msm', MarkovStateModel(lag_time=msm_lag, verbose=False))])
 
