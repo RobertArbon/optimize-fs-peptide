@@ -1,0 +1,56 @@
+# osprey configuration file.
+
+
+estimator:
+    pickle: model.pickl
+
+strategy:
+    name: random
+
+search_space:
+  features__which_feat:
+    choices:
+
+    type: enum
+
+  tica__lag_time:
+    # 0.5 ns/frame.  500ns long trajectories.
+    # so lag times are 1ns - 251ns: 1, 11, 21, etc.
+    min: 2
+    max: 502
+    num: 26
+    type: jump
+    var_type: int
+
+  tica__n_components:
+    min: 1
+    max: 20
+    type: int
+
+  cluster__n_clusters:
+    # 100, 120, 140...
+    min: 100 
+    max: 500
+    num: 21
+    type: jump
+    var_type: int
+
+cv:
+    name: shufflesplit
+    params:
+      n_iter: 5
+      test_size: 0.5
+      random_state: 42
+
+dataset_loader:
+  # specification of the dataset on which to train the models.
+  name: mdtraj
+  params:
+    trajectories: ..data/trajectory-*.xtc
+    topology: ../data/fs-peptide.pdb
+    stride: 10
+
+
+trials:
+  uri: sqlite:///osprey-trails.db
+  project_name: random

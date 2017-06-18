@@ -4,7 +4,7 @@
 *.pyc
 *.pickl
 *.db
-Model_Functions/\.ipynb_checkpoints/
+fs-peptide/\.ipynb_checkpoints/
 *.npy
 Misc/\.ipynb_checkpoints/
 

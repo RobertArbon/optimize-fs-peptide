@@ -1,0 +1,64 @@
+# osprey configuration file.
+
+estimator:
+    pickle: model.pickl
+
+strategy:
+    name: random
+
+search_space:
+  features__which_feat:
+    choices:
+		- ['superposed']
+		- ['nb_pairs']
+		- ['hb_pairs']
+		- ['ff_bb_tor']
+		- ['ff_re_tor']
+		- ['pp_tor']
+		- ['ppo_tor']
+		- ['chi_tor']
+		- ['alpha_angle']
+		- ['kappa_angle']
+		- ['ca_cont']
+		- ['close_cont']
+		- ['close-h_cont']
+		- ['raw_pos']
+		- ['drid']
+		- ['ff_bb_ang']
+		- ['ff_re_ang']
+    type: enum
+
+  tica__lag_time:
+    # 0.5 ns/frame.  500ns long trajectories.
+    min: 2
+    max: 999
+    type: int
+
+  tica__n_components:
+    min: 1
+    max: 10
+    type: int
+
+  cluster__n_clusters:
+    min: 10
+    max: 1000
+
+
+cv:
+    name: shufflesplit
+    params:
+      n_iter: 5
+      test_size: 0.5
+
+dataset_loader:
+  # specification of the dataset on which to train the models.
+  name: mdtraj
+  params:
+    trajectories: ..data/trajectory-*.xtc
+    topology: ../data/fs-peptide.pdb
+    stride: 10
+
+
+trials:
+  uri: sqlite:///osprey-trails.db
+  project_name: random
