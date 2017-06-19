@@ -4,12 +4,15 @@ estimator:
     pickle: model.pickl
 
 strategy:
-    name: random
+    name: hyperopt_tpe
+    params:
+        seeds: 20
+        gamma: 0.25
 
 search_space:
   features__which_feat:
     choices:
-#        - ['superposed']
+        - ['superposed']
 #        - ['hb_pairs']
 #        - ['pp_tor']
 #        - ['ppo_tor']
@@ -24,7 +27,7 @@ search_space:
 #        - ['drid']
 #        - ['ff_bb_ang']
 #        - ['ff_re_ang']
-        - ['ff_all_ang']
+#        - ['ff_all_ang']
     type: enum
 
   tica__lag_time:
@@ -52,11 +55,11 @@ dataset_loader:
   # specification of the dataset on which to train the models.
   name: mdtraj
   params:
-    trajectories: ../data/trajectory-*.xtc
-    topology: ../data/fs-peptide.pdb
+    trajectories: ~/msmbuilder_data/fs_peptide/trajectory-*.xtc
+    topology: ~/msmbuilder_data/fs_peptide/fs-peptide.pdb
     stride: 10
 
 
 trials:
   uri: sqlite:///osprey-trails.db
-  project_name: random
+  project_name: superposed

@@ -4,7 +4,10 @@ estimator:
     pickle: model.pickl
 
 strategy:
-    name: random
+    name: hyperopt_tpe
+    params:
+        seeds: 20
+        gamma: 0.25
 
 search_space:
   features__which_feat:
@@ -14,10 +17,10 @@ search_space:
 #        - ['pp_tor']
 #        - ['ppo_tor']
 #        - ['chi_tor']
-#        - ['all_tor']
+        - ['all_tor']
 #        - ['alpha_angle']
 #        - ['kappa_angle']
-        - ['ca_cont']
+#        - ['ca_cont']
 #        - ['close_cont']
 #        - ['close-h_cont']
 #        - ['raw_pos']
@@ -52,11 +55,11 @@ dataset_loader:
   # specification of the dataset on which to train the models.
   name: mdtraj
   params:
-    trajectories: ../data/trajectory-*.xtc
-    topology: ../data/fs-peptide.pdb
+    trajectories: ~/msmbuilder_data/fs_peptide/trajectory-*.xtc
+    topology: ~/msmbuilder_data/fs_peptide/fs-peptide.pdb
     stride: 10
 
 
 trials:
   uri: sqlite:///osprey-trails.db
-  project_name: random
+  project_name: all_tor

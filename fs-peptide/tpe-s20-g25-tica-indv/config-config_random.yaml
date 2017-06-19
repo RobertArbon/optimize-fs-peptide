@@ -4,7 +4,10 @@ estimator:
     pickle: model.pickl
 
 strategy:
-    name: random
+    name: hyperopt_tpe
+    params:
+        seeds:20
+        gamma:0.25
 
 search_space:
   features__which_feat:
@@ -23,7 +26,7 @@ search_space:
 #        - ['raw_pos']
 #        - ['drid']
 #        - ['ff_bb_ang']
-        - ['ff_re_ang']
+#        - ['ff_re_ang']
 #        - ['ff_all_ang']
     type: enum
 
@@ -59,4 +62,5 @@ dataset_loader:
 
 trials:
   uri: sqlite:///osprey-trails.db
-  project_name: random
+  project_name: hyperopt_tpe    params:       seeds:20
+        gamma:0.25
