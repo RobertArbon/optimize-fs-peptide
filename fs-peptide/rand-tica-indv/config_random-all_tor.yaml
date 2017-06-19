@@ -14,7 +14,7 @@ search_space:
 #        - ['pp_tor']
 #        - ['ppo_tor']
 #        - ['chi_tor']
-#        - ['all_tor']
+        - ['all_tor']
 #        - ['alpha_angle']
 #        - ['kappa_angle']
 #        - ['ca_cont']
