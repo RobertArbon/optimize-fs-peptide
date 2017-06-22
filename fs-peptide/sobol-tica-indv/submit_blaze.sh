@@ -7,9 +7,10 @@ do
      if [ $job_n -le 5 ] 
      then 
          name=${job%.*}
-         name=${name#config_random-}
+         name=${name#config-}
          echo $name
-         mpirun -np $N_CORES --output-filename $name osprey worker -n 33 $job   
+         #mpirun -np $N_CORES --output-filename $name osprey worker -n 33 $job   
+         osprey worker -n 34 $job &> $name.log &
      fi 
      (( job_n += 1 ))
 done
