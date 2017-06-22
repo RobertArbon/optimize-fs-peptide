@@ -19,3 +19,5 @@ Misc/\.ipynb_checkpoints/
 *.zip
 
 Test_TPE/\.ipynb_checkpoints/
+
+Test_Sobol/\.ipynb_checkpoints/
