@@ -44,12 +44,14 @@ search_space:
 
 cv:
     name: shufflesplit
+    params:
       n_splits: 5
       test_size: 0.5
 
 dataset_loader:
   # specification of the dataset on which to train the models.
   name: mdtraj
+  params:
     trajectories: ~/msmbuilder_data/fs_peptide/trajectory-*.xtc
     topology: ~/msmbuilder_data/fs_peptide/fs-peptide.pdb
     stride: 10
