@@ -1,0 +1,1552 @@
+======================================================================
+= osprey is a tool for machine learning hyperparameter optimization. =
+======================================================================
+
+osprey version:      1.2.0dev
+time:                June 22, 2017 11:15 AM
+hostname:            Blaze
+cwd:                 /home/robarbon/research/hyperparameter_opt/hyperparamopt/fs-peptide/rand-tica-indv
+pid:                 8940
+
+Loading config file:     config_random-ff_bb_ang.yaml...
+
+msmbuilder version:  3.9.0.dev0+25d4690daee812d8952133d13f7d5d5a69eb2ab7
+mdtraj version:      1.8.0
+
+
+Loading dataset...
+
+Dataset contains 28 element(s) with out labels
+The elements have shape: [(1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), (1000,), ...]
+Instantiated estimator:
+  Pipeline(steps=[('features', FeatureSelector(features=OrderedDict([('superposed', SuperposeFeaturizer(atom_indices=array([  0,   1, ..., 262, 263]),
+          reference_traj=<mdtraj.Trajectory with 1 frames, 264 atoms, 23 residues, without unitcells at 0x7f55aa5300f0>,
+          superpose_atom_indices=array(...es=2,
+         prior_counts=0, reversible_type='mle', sliding_window=True,
+         verbose=False))])
+Hyperparameter search space:
+  features__which_feat     	(enum)    choices = (['ff_bb_ang'])
+  tica__lag_time           	(int)          1 <= x <= 999
+  cluster__n_clusters      	(int)         10 <= x <= 1000
+  tica__n_components       	(int)          1 <= x <= 10
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 0 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 880, 'cluster__n_clusters': 508, 'tica__n_components': 9}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.040342
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 6 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 55, 'cluster__n_clusters': 904, 'tica__n_components': 10}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.111860
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             3 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 13 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 360, 'cluster__n_clusters': 407, 'tica__n_components': 2}
+(random took 0.010 s)
+
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
+  "This module will be removed in 0.20.", DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/grid_search.py:43: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. This module will be removed in 0.20.
+  DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/mdtraj/formats/pdb/pdbfile.py:196: UserWarning: Unlikely unit cell vectors detected in PDB file likely resulting from a dummy CRYST1 record. Discarding unit cell vectors.
+  warnings.warn('Unlikely unit cell vectors detected in PDB file likely '
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=508. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=508. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=508. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=508. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=508. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   12.5s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=904. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=904. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=904. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=904. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=904. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   26.6s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=407. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=407. Setting it to 3*k
+  init_size=init_size)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.157281
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             4 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 18 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 7, 'cluster__n_clusters': 626, 'tica__n_components': 8}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.155240
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             5 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 24 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 718, 'cluster__n_clusters': 983, 'tica__n_components': 8}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.033452
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             6 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 32 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 355, 'cluster__n_clusters': 498, 'tica__n_components': 1}
+(random took 0.009 s)
+
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=407. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=407. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=407. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   12.9s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=626. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=626. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=626. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=626. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=626. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   20.3s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=983. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=983. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=983. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=983. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=983. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   25.6s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=498. Setting it to 3*k
+  init_size=init_size)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.107515
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             7 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 36 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 315, 'cluster__n_clusters': 700, 'tica__n_components': 8}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.130320
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             8 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 41 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 961, 'cluster__n_clusters': 643, 'tica__n_components': 8}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 0.994804
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                             9 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 45 trials
+Choosing next hyperparameters with random...
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=498. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=498. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=498. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=498. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   13.5s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=700. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=700. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=700. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=700. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=700. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   20.1s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=643. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=643. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=643. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=643. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=643. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   16.4s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 196, 'cluster__n_clusters': 265, 'tica__n_components': 6}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.140804
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            10 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 50 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 797, 'cluster__n_clusters': 160, 'tica__n_components': 5}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.092858
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            11 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 54 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 78, 'cluster__n_clusters': 572, 'tica__n_components': 6}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.184703
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            12 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 58 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 320, 'cluster__n_clusters': 172, 'tica__n_components': 3}
+(random took 0.009 s)
+
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   12.6s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:    8.9s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=572. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=572. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=572. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=572. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=572. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   18.2s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.197506
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            13 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 64 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 649, 'cluster__n_clusters': 193, 'tica__n_components': 4}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.087834
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            14 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 66 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 975, 'cluster__n_clusters': 379, 'tica__n_components': 7}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.006423
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            15 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 70 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 771, 'cluster__n_clusters': 748, 'tica__n_components': 6}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.060855
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            16 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 78 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 541, 'cluster__n_clusters': 352, 'tica__n_components': 4}
+(random took 0.009 s)
+
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   11.6s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:    9.9s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=379. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=379. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=379. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=379. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=379. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   11.1s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=748. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=748. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=748. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=748. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=748. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   18.9s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.115706
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            17 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 81 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 731, 'cluster__n_clusters': 214, 'tica__n_components': 10}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.110740
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            18 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 84 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 289, 'cluster__n_clusters': 561, 'tica__n_components': 4}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.149252
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            19 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 89 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 318, 'cluster__n_clusters': 837, 'tica__n_components': 10}
+(random took 0.010 s)
+
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=352. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=352. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=352. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=352. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=352. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   12.4s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   10.5s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=561. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=561. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=561. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=561. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=561. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   17.9s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=837. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.098732
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            20 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 95 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 430, 'cluster__n_clusters': 71, 'tica__n_components': 8}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.126379
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            21 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 100 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 101, 'cluster__n_clusters': 436, 'tica__n_components': 5}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.156624
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            22 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 102 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 885, 'cluster__n_clusters': 648, 'tica__n_components': 8}
+(random took 0.009 s)
+
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=837. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=837. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=837. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=837. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   23.2s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:    9.8s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=436. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=436. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=436. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=436. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=436. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   15.1s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=648. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=648. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.037336
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            23 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 109 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 701, 'cluster__n_clusters': 30, 'tica__n_components': 5}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.111330
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            24 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 111 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 596, 'cluster__n_clusters': 587, 'tica__n_components': 2}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.118347
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            25 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 115 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 678, 'cluster__n_clusters': 761, 'tica__n_components': 8}
+(random took 0.010 s)
+
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=648. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=648. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=648. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   17.3s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:    8.3s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=587. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=587. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=587. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=587. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=587. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   14.2s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=761. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=761. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=761. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.105218
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            26 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 120 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 522, 'cluster__n_clusters': 297, 'tica__n_components': 1}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.069825
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            27 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 124 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 591, 'cluster__n_clusters': 556, 'tica__n_components': 4}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.177602
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            28 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 128 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 678, 'cluster__n_clusters': 52, 'tica__n_components': 5}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.098551
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            29 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 131 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 253, 'cluster__n_clusters': 57, 'tica__n_components': 3}
+(random took 0.009 s)
+
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=761. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=761. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   20.3s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   10.1s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=556. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=556. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=556. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=556. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=556. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   17.1s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:    8.5s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.177203
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            30 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 134 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 413, 'cluster__n_clusters': 891, 'tica__n_components': 3}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.102617
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            31 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 140 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 900, 'cluster__n_clusters': 658, 'tica__n_components': 8}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.031836
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            32 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 145 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 786, 'cluster__n_clusters': 735, 'tica__n_components': 2}
+(random took 0.009 s)
+
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   10.0s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=891. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=891. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=891. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=891. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=891. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   23.3s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=658. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=658. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=658. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=658. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=658. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   14.7s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=735. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=735. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.075713
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            33 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 150 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 229, 'cluster__n_clusters': 341, 'tica__n_components': 5}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.154786
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            34 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 155 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 463, 'cluster__n_clusters': 897, 'tica__n_components': 8}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.128150
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            35 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 163 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 766, 'cluster__n_clusters': 899, 'tica__n_components': 8}
+(random took 0.009 s)
+
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=735. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=735. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=735. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   16.6s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=341. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=341. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=341. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=341. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=341. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   14.1s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=897. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=897. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=897. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=897. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=897. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   24.3s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=899. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.058467
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            36 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 170 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 846, 'cluster__n_clusters': 453, 'tica__n_components': 2}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.016546
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            37 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 174 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 153, 'cluster__n_clusters': 66, 'tica__n_components': 6}
+(random took 0.010 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.179230
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            38 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 176 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 625, 'cluster__n_clusters': 154, 'tica__n_components': 4}
+(random took 0.009 s)
+
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=899. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=899. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=899. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=899. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   24.1s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=453. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=453. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=453. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=453. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=453. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   10.7s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   10.6s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.155320
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            39 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 181 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 985, 'cluster__n_clusters': 948, 'tica__n_components': 2}
+(random took 0.009 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.004002
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            40 / 40
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trails.db...
+History contains: 188 trials
+Choosing next hyperparameters with random...
+  {'features__which_feat': ['ff_bb_ang'], 'tica__lag_time': 250, 'cluster__n_clusters': 276, 'tica__n_components': 8}
+(random took 0.011 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [14000, 14000, 14000, 14000, 14000]
+[CV]   n_test_samples: [14000, 14000, 14000, 14000, 14000]
+Loading trials database: sqlite:///osprey-trails.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 1.148718
+(best score so far   = 2.357854)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+40/40 models fit successfully.
+time:         June 22, 2017 11:25 AM
+elapsed:      10 minutes, 24 seconds.
+osprey worker exiting.
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:    9.8s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=948. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=948. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=948. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=948. Setting it to 3*k
+  init_size=init_size)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/cluster/k_means_.py:1381: RuntimeWarning: init_size=300 should be larger than k=948. Setting it to 3*k
+  init_size=init_size)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   20.3s finished
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+/home/robarbon/anaconda3/envs/science/lib/python3.5/site-packages/sklearn/base.py:122: DeprecationWarning: Estimator FeatureSelector modifies parameters in __init__. This behavior is deprecated as of 0.18 and support for this behavior will be removed in 0.20.
+  % type(estimator).__name__, DeprecationWarning)
+[Parallel(n_jobs=1)]: Done   5 out of   5 | elapsed:   11.5s finished

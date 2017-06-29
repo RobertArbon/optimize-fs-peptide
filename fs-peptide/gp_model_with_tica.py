@@ -41,7 +41,7 @@ all_angle_idx = np.load('angles_all.npy')  # residue angles from forcefield
 #
 # OTHER PARAMETERS
 #
-ref_traj = md.load('data/helix-reference.xtc', top='/home/robarbon/msmbuilder_data/fs_peptide/fs-peptide.pdb')
+ref_traj = md.load('data/helix-reference.xtc', top='/Users/robert_arbon/msmbuilder_data/fs_peptide/fs-peptide.pdb')
 
 #
 # FEATURES
@@ -80,18 +80,19 @@ msm_lag = int(40/to_ns)
 #
 # MODEL
 #
-pipe = Pipeline([('features', FeatureSelector(features=tica_unstructured_features)),
-                 ('variance_cut', VarianceThreshold()),
-                 ('scaling', RobustScaler()),
-                 ('tica', tICA(kinetic_mapping=True)),
-                 ('cluster', MiniBatchKMeans()),
-                 ('msm', MarkovStateModel(lag_time=msm_lag, verbose=False, n_timescales=2))])
-#
-# SAVE MODEL
-#
-savedir = 'rand-tica-all'
-save_generic(pipe, '{}/model.pickl'.format(savedir))
-print_feature_names(features, join(savedir, 'feature_list.txt'))
+for feat in tica_unstructured_features:
+    pipe = Pipeline([(feat[0], feat[1]),
+                     ('variance_cut', VarianceThreshold()),
+                     ('scaling', RobustScaler()),
+                     ('tica', tICA(kinetic_mapping=True)),
+                     ('cluster', MiniBatchKMeans()),
+                     ('msm', MarkovStateModel(lag_time=msm_lag, verbose=False, n_timescales=2))])
+    #
+    # SAVE MODEL
+    #
+    savedir = 'gp-m52-ei-tica-indv'
+    save_generic(pipe, '{0}/{1}.pickl'.format(savedir, feat[0]))
+
 
 
 
