@@ -18,4 +18,6 @@ Misc/\.ipynb_checkpoints/
 
 *.zip
 
+*.tpr
+*.xtc
 Test_TPE/\.ipynb_checkpoints/

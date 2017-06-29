@@ -13,7 +13,7 @@ i=1
 for f in `ls *.yaml`; do
     if [ $i -le $NO_OF_CORES ]
     then
-    osprey worker $f -n 200 --seeds $i > osprey.$PBS_JOBID.$i-$f.log 2>&1 &
+    osprey worker $f -n 200 --seed $i > osprey.$PBS_JOBID.$i-$f.log 2>&1 &
     fi
     (( i += 1 ))
 done
