@@ -7,7 +7,7 @@ estimator:
                  ('scaling', RobustScaler()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
-                 ('msm', MarkovStateModel(lag_time=100, verbose=False))])
+                 ('msm', MarkovStateModel(n_timescales=2, lag_time=100, verbose=False))])
   eval_scope: msmbuilder
 
 strategy:
