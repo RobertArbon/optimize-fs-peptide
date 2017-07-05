@@ -8,6 +8,7 @@ estimator:
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
                  ('msm', MarkovStateModel(lag_time=100, verbose=False))])
+  eval_scope: msmbuilder
 
 strategy:
   name: random

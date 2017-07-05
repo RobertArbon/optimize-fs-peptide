@@ -8,6 +8,7 @@ estimator:
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
                  ('msm', MarkovStateModel(lag_time=100, verbose=False))])
+  eval_scope: msmbuilder
 
 strategy:
   name: random
@@ -50,7 +51,6 @@ dataset_loader:
     trajectories: ~/Datasets/Villin/train/trajectory-*.xtc
     topology: ~/Datasets/Villin/train/top_prot.pdb
     stride: 1
-
 
 trials:
   uri: sqlite:///osprey-trails.db
