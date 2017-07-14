@@ -2,7 +2,7 @@
 
 estimator:
   eval: |
-      Pipeline([('feature', DRID()),
+      Pipeline([('feature', DRIDFeaturizer()),
                  ('variance_cut', VarianceThreshold()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
