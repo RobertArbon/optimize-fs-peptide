@@ -4,10 +4,9 @@ estimator:
   eval: |
       Pipeline([('feature', LogisticContactFeaturizer(contacts='all', scheme='closest-heavy', center=0.8, steepness=20)),
                  ('variance_cut', VarianceThreshold()),
-                 ('scaling', RobustScaler()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
-                 ('msm', MarkovStateModel(lag_time=100, verbose=False))])
+                 ('msm', MarkovStateModel(n_timescales=2, lag_time=25, verbose=False))])
   eval_scope: msmbuilder
 
 strategy:
@@ -26,7 +25,7 @@ search_space:
 
   tica__lag_time:
     min: 1
-    max: 999
+    max: 250
     type: int
 
   tica__n_components:
