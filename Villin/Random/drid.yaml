@@ -2,7 +2,7 @@
 
 estimator:
   eval: |
-      Pipeline([('feature', DRID()),
+      Pipeline([('feature', DRIDFeaturizer()),
                  ('variance_cut', VarianceThreshold()),
                  ('scaling', RobustScaler()),
                  ('tica', tICA(kinetic_mapping=True)),
