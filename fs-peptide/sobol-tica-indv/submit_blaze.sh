@@ -10,7 +10,7 @@ do
          name=${name#config-}
          echo $name
          #mpirun -np $N_CORES --output-filename $name osprey worker -n 33 $job   
-         osprey worker -n 34 $job &> $name.log &
+         osprey worker -n 200 $job &> $name.log &
      fi 
      (( job_n += 1 ))
 done

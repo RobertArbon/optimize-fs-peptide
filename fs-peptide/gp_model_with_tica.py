@@ -41,7 +41,7 @@ all_angle_idx = np.load('angles_all.npy')  # residue angles from forcefield
 #
 # OTHER PARAMETERS
 #
-ref_traj = md.load('data/helix-reference.xtc', top='/Users/robert_arbon/msmbuilder_data/fs_peptide/fs-peptide.pdb')
+ref_traj = md.load('data/helix-reference.xtc', top='/home/robarbon/msmbuilder_data/fs_peptide/fs-peptide.pdb')
 
 #
 # FEATURES
