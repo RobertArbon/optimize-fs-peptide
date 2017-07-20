@@ -7,4 +7,3 @@ config = Config(my_config)
 
 # Retrieve Trial Results
 df = config.trial_results()
-
