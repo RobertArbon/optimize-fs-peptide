@@ -2,7 +2,8 @@
 
 estimator:
   eval: |
-      Pipeline([ ('variance_cut', VarianceThreshold()),
+      Pipeline([('feature', ContactFeaturizer(contacts='all', scheme='closest-heavy')),
+                 ('variance_cut', VarianceThreshold()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
                  ('msm', MarkovStateModel(n_timescales=2, lag_time=25, verbose=False))])
@@ -34,10 +35,12 @@ cv:
       test_size: 0.5
 
 dataset_loader:
-  name: numpy
+  name: mdtraj
   params:
-    filenames: ~/Datasets/Villin/train/cont_closest/trajectory-*.npy
+    trajectories: ~/Datasets/Villin/train/trajectory-*.xtc
+    topology: ~/Datasets/Villin/train/top_prot.pdb
+    stride: 1
 
 trials:
   uri: sqlite:///osprey-trails.db
-  project_name: cont_closest
+  project_name: cont_closest-heavy

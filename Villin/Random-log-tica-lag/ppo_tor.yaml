@@ -16,6 +16,7 @@ search_space:
     min: 1
     max: 250
     type: int
+    warp: log
 
   tica__n_components:
     min: 1
@@ -36,8 +37,8 @@ cv:
 dataset_loader:
   name: numpy
   params:
-    filenames: ~/Datasets/Villin/train/cont_closest/trajectory-*.npy
+    filenames: ~/Datasets/Villin/train/ppo_tor/trajectory-*.npy
 
 trials:
   uri: sqlite:///osprey-trails.db
-  project_name: cont_closest
+  project_name: ppo_tor

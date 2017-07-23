@@ -2,20 +2,27 @@
 
 estimator:
   eval: |
-      Pipeline([ ('variance_cut', VarianceThreshold()),
+      Pipeline([('feature', BinaryContactFeaturizer(contacts='all', scheme='ca', cutoff=0.8)),
+                 ('variance_cut', VarianceThreshold()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
                  ('msm', MarkovStateModel(n_timescales=2, lag_time=25, verbose=False))])
   eval_scope: msmbuilder
 
 strategy:
-  name: random
+  name: sobol
 
 search_space:
+  feature__cutoff:
+    min: 0.3
+    max: 1.5
+    type: float
+
   tica__lag_time:
     min: 1
     max: 250
     type: int
+    warp: log
 
   tica__n_components:
     min: 1
@@ -34,10 +41,13 @@ cv:
       test_size: 0.5
 
 dataset_loader:
-  name: numpy
+  name: mdtraj
   params:
-    filenames: ~/Datasets/Villin/train/cont_closest/trajectory-*.npy
+    trajectories: ~/Datasets/Villin/train/trajectory-*.xtc
+    topology: ~/Datasets/Villin/train/top_prot.pdb
+    stride: 1
+
 
 trials:
   uri: sqlite:///osprey-trails.db
-  project_name: cont_closest
+  project_name: b-cont_ca

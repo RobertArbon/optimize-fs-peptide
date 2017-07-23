@@ -2,8 +2,7 @@
 
 estimator:
   eval: |
-      Pipeline([('feature', DihedralFeaturizer(types=['phi', 'psi', 'omega'])),
-                 ('variance_cut', VarianceThreshold()),
+      Pipeline([ ('variance_cut', VarianceThreshold()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
                  ('msm', MarkovStateModel(n_timescales=2, lag_time=25, verbose=False))])
@@ -35,11 +34,9 @@ cv:
       test_size: 0.5
 
 dataset_loader:
-  name: mdtraj
+  name: numpy
   params:
-    trajectories: ~/Datasets/Villin/train/trajectory-*.xtc
-    topology: ~/Datasets/Villin/train/top_prot.pdb
-    stride: 1
+    filenames: ~/Datasets/Villin/train/ppo_tor/trajectory-*.npy
 
 trials:
   uri: sqlite:///osprey-trails.db

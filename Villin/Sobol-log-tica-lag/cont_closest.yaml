@@ -9,13 +9,14 @@ estimator:
   eval_scope: msmbuilder
 
 strategy:
-  name: random
+  name: sobol
 
 search_space:
   tica__lag_time:
     min: 1
     max: 250
     type: int
+    warp: log
 
   tica__n_components:
     min: 1
