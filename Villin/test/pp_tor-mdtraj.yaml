@@ -2,7 +2,7 @@
 
 estimator:
   eval: |
-      Pipeline([('feature', DRID()),
+      Pipeline([('feature', DihedralFeaturizer(types=['phi', 'psi'])),
                  ('variance_cut', VarianceThreshold()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
@@ -24,7 +24,7 @@ search_space:
     type: int
 
   cluster__n_clusters:
-    min: 10
+    min: 900 
     max: 1000
     type: int
 
@@ -43,4 +43,4 @@ dataset_loader:
 
 trials:
   uri: sqlite:///osprey-trails.db
-  project_name: drid
+  project_name: pp_tor

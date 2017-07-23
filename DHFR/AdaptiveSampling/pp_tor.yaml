@@ -36,7 +36,7 @@ cv:
 dataset_loader:
   name: numpy
   params:
-    filenames: /Users/robert_arbon/Google Drive/Research/Hyperparameter_Optimisation/Code/Data/DHFR/ftraj-*.npy
+    filenames:  /panfs/panasas01/chem/ra15808/Datasets/DHFR/train/ftraj-*.npy
 
 trials:
   uri: sqlite:///osprey-trails.db

@@ -2,15 +2,15 @@
 
 estimator:
   eval: |
-      Pipeline([('feature', DRID()),
+      Pipeline([('feature', DihedralFeaturizer(types=['phi', 'psi', 'omega', 'chi1', 'chi2', 'chi3', 'chi4'])),
                  ('variance_cut', VarianceThreshold()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
-                 ('msm', MarkovStateModel(n_timescales=2, lag_time=25, verbose=False))])
+                 ('msm', MarkovStateModel(lag_time=25, verbose=False))])
   eval_scope: msmbuilder
 
 strategy:
-  name: sobol
+  name: random
 
 search_space:
   tica__lag_time:
@@ -43,4 +43,4 @@ dataset_loader:
 
 trials:
   uri: sqlite:///osprey-trails.db
-  project_name: drid
+  project_name: all_tor
