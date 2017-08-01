@@ -22,6 +22,7 @@ search_space:
     min: 1
     max: 250
     type: int
+    warp: log
 
   tica__n_components:
     min: 1

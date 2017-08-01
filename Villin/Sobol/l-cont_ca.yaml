@@ -23,11 +23,11 @@ search_space:
     max: 50.0
     type: float
 
-
   tica__lag_time:
     min: 1
     max: 250
     type: int
+    warp: log
 
   tica__n_components:
     min: 1
