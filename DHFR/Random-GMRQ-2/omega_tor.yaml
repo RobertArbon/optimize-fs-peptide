@@ -5,7 +5,7 @@ estimator:
       Pipeline([ ('variance_cut', VarianceThreshold()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
-                 ('msm', MarkovStateModel(n_timescales=2, lag_time=25, verbose=False))])
+                 ('msm', MarkovStateModel(n_timescales=2, lag_time=50, verbose=True))])
   eval_scope: msmbuilder
 
 strategy:
@@ -14,7 +14,7 @@ strategy:
 search_space:
   tica__lag_time:
     min: 1
-    max: 250
+    max: 500
     type: int
     warp: log
 
@@ -37,8 +37,8 @@ cv:
 dataset_loader:
   name: numpy
   params:
-    trajectories: ~/Datasets/Villin/train/kappa_angle/trajectory-*.npy
+    filenames: ~/Datasets/Villin/train/omega_tor/trajectory-*.npy
 
 trials:
-  uri: sqlite:///osprey-trails.db
-  project_name: kappa_angle
+  uri: sqlite:///osprey-trials.db
+  project_name: omega_tor

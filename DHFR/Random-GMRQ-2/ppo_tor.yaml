@@ -2,11 +2,10 @@
 
 estimator:
   eval: |
-      Pipeline([('feature', ContactFeaturizer(contacts='all', scheme='closest-heavy')),
-                 ('variance_cut', VarianceThreshold()),
+      Pipeline([ ('variance_cut', VarianceThreshold()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
-                 ('msm', MarkovStateModel(n_timescales=2, lag_time=25, verbose=False))])
+                 ('msm', MarkovStateModel(n_timescales=2, lag_time=50, verbose=True))])
   eval_scope: msmbuilder
 
 strategy:
@@ -15,8 +14,9 @@ strategy:
 search_space:
   tica__lag_time:
     min: 1
-    max: 250
+    max: 500
     type: int
+    warp: log
 
   tica__n_components:
     min: 1
@@ -35,12 +35,10 @@ cv:
       test_size: 0.5
 
 dataset_loader:
-  name: mdtraj
+  name: numpy
   params:
-    trajectories: ~/Datasets/Villin/train/trajectory-*.xtc
-    topology: ~/Datasets/Villin/train/top_prot.pdb
-    stride: 1
+    filenames: ~/Datasets/Villin/train/ppo_tor/trajectory-*.npy
 
 trials:
-  uri: sqlite:///osprey-trails.db
-  project_name: cont_closest-heavy
+  uri: sqlite:///osprey-trials.db
+  project_name: ppo_tor
