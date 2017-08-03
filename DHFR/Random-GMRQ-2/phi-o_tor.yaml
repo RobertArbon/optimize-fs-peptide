@@ -37,7 +37,7 @@ cv:
 dataset_loader:
   name: numpy
   params:
-    filenames: ~/Datasets/Villin/train/phi-o_tor/trajectory-*.npy
+    filenames: ~/Datasets/DHFR/train/phi-o_tor/trajectory-*.npy
 
 trials:
   uri: sqlite:///osprey-trials.db
