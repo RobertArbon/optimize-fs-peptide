@@ -3,6 +3,7 @@ This takes and old database of trials and re-runs the various models using a dif
 """
 from osprey.config import Config
 from sklearn.pipeline import Pipeline
+from sklearn.model_selection import ShuffleSplit
 from msmbuilder.feature_selection import VarianceThreshold
 from msmbuilder.decomposition import tICA
 from msmbuilder.cluster import MiniBatchKMeans
@@ -23,7 +24,17 @@ pipe = Pipeline([('variance_cut', VarianceThreshold()),
           ('msm', MarkovStateModel(use_gap='timescales', lag_time=50, verbose=True))])
 
 
-def load_trajectoris(feat):
+# cross validation iterator
+# TODO get this from the config file
+# cv:
+#     name: shufflesplit
+#     params:
+#       n_splits: 5
+#       test_size: 0.5
+cv = ShuffleSplit(n_splits=5, test_size=0.5)
+
+
+def get_trajectoris(feat):
     """
     Gets the trajctories associated with a feature
     :param feat: 
@@ -57,7 +68,7 @@ def get_parameters(irow):
 
 
 if __name__ == "__main__":
-
+    np.random.seed(42)
     config = Config(config_path)
     trials = config.trial_results()
 
@@ -65,7 +76,27 @@ if __name__ == "__main__":
     # with Pool() as pool:
     #     dihed_trajs = dict(pool.imap_unordered(feat, meta.iterrows()))
     new_trial_params = [get_parameters(irow) for irow in trials.iterrows()]
-    print(new_trial_params[0])
+
+    trial_config = new_trial_params[0]
+    feat = trial_config['feature']
+    X = get_trajectoris(feat)
+
+    row_num = trial_config['row']
+    params = trial_config['params']
+    pipe.set_params(**params)
+
+    train_timescales = []
+    test_timescales = []
+    train_gaps = []
+    test_gaps = []
+    train_scores = []
+    test_scores = []
+
+    for train, test in cv.split(X):
+        print(X)
+        print(train)
+        # pipe.fit(X[train])
+        # train_scores.append(pipe.score(X[train]))
 
 
 
