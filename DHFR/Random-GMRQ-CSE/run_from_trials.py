@@ -88,7 +88,7 @@ def run_trial(trial_config):
     train_n_timescales = []
     test_scores = []
 
-    for idx, (train_idx, test_idx) in enumerate(cv.split(X)):
+    for train_idx, test_idx in cv.split(X):
         pipe = get_pipeline(trial_config['params'])
 
         train = [X[idx] for idx in train_idx]
@@ -114,7 +114,7 @@ if __name__ == "__main__":
     np.random.seed(42)
     config = Config(config_path)
     trials = config.trial_results()
-    # trials = trials.iloc[:2, :]
+    trials = trials.iloc[:2, :]
     trial_configs = [get_parameters(irow) for irow in trials.iterrows()]
 
     with Pool(4) as pool:
