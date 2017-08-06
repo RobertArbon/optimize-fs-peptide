@@ -1,5 +1,6 @@
 """
 This takes and old database of trials and re-runs the various models using a different scoring method. 
+The folds won't be the same but as we're only interested in average quantities that shouldn't be a problem. 
 """
 from osprey.config import Config
 from sklearn.pipeline import Pipeline
@@ -11,6 +12,8 @@ from msmbuilder.msm import MarkovStateModel
 from os.path import join
 from glob import glob
 import numpy as np
+from multiprocessing import Pool
+import pandas as pd
 
 # Globals
 config_path = '../../Trial Data/DHFR/Random-GMRQ-2/alpha_angle.yaml'
@@ -39,7 +42,7 @@ def get_pipeline(parameters):
 #     params:
 #       n_splits: 5
 #       test_size: 0.5
-cv = ShuffleSplit(n_splits=5, test_size=0.5)
+cv = ShuffleSplit(n_splits=2, test_size=0.5)
 
 
 def get_trajectories(feat):
@@ -70,56 +73,62 @@ def get_parameters(irow):
 
     trial_config['params'] = params
     trial_config['feature'] = row['project_name']
-    trial_config['row'] = i
+    trial_config['id'] = row['id']
 
     return trial_config
+
+
+def run_trial(trial_config):
+
+    X = get_trajectories(trial_config['feature'])
+    id = trial_config['id']
+
+    train_scores = []
+    train_gaps = []
+    train_n_timescales = []
+    test_scores = []
+
+    for idx, (train_idx, test_idx) in enumerate(cv.split(X)):
+        pipe = get_pipeline(trial_config['params'])
+
+        train = [X[idx] for idx in train_idx]
+        pipe.fit(train)
+
+        train_n_timescales.append(pipe.named_steps['msm'].n_timescales)
+        train_gaps.append(pipe.named_steps['msm'].gap_)
+        train_scores.append(pipe.score(train))
+
+        test = [X[idx] for idx in test_idx]
+        try:
+            score = pipe.score(test)
+        except:
+            score = None
+        test_scores.append(score)
+
+    results = {'id': id, 'cse_train_scores': train_scores, 'cse_train_gaps': train_gaps,
+               'cse_train_n_timescales': train_n_timescales, 'cse_test_scores': test_scores }
+    return results
 
 
 if __name__ == "__main__":
     np.random.seed(42)
     config = Config(config_path)
     trials = config.trial_results()
-    trials = trials.iloc[:5,:]
-    print('original df: ')
-    print(trials.head())
+    # trials = trials.iloc[:2, :]
+    trial_configs = [get_parameters(irow) for irow in trials.iterrows()]
 
-    ## Do it in parallel
-    # with Pool() as pool:
-    #     dihed_trajs = dict(pool.imap_unordered(feat, meta.iterrows()))
-    new_trial_params = [get_parameters(irow) for irow in trials.iterrows()]
+    with Pool(4) as pool:
+        results = list(pool.imap_unordered(run_trial, trial_configs))
 
-    trial_config = new_trial_params[0]
+    data = {'id': [x['id'] for x in results],
+            'cse_train_scores': [x['cse_train_scores'] for x in results],
+            'cse_train_gaps': [x['cse_train_gaps'] for x in results],
+            'cse_train_n_timescales': [x['cse_train_n_timescales'] for x in results],
+            'cse_test_scores': [x['cse_test_scores'] for x in results]}
+    df2 = pd.DataFrame(data=data)
+    all_trials = trials.merge(right=df2, how='outer', on='id')
 
-    feat = trial_config['feature']
-    X = get_trajectories(feat)
-
-    row_num = trial_config['row']
-    params = trial_config['params']
-
-    train_timescales = []
-    test_timescales = []
-    train_gaps = []
-    test_gaps = []
-    train_scores = []
-    test_scores = []
-
-    for train_idx, test_idx in cv.split(X):
-        # the pipeline to use
-        pipe = get_pipeline(params)
-
-        train = [X[i] for i in train_idx]
-        test = [X[i] for i in test_idx]
-        pipe.fit(train)
-        train_timescales.append(pipe.named_steps['msm'].n_timescales)
-        train_gaps.append(pipe.named_steps['msm'].gap_)
-        train_scores.append(pipe.score(train))
-
-        # train_scores.append(pipe.score(X[train]))
-    print(train_timescales)
-    print(train_gaps)
-    print(train_scores)
-
-    # trials.ix[row_num,'cse_n_timescales'] =
+    pd.to_pickle(all_trials, 'cse_trials.pickl')
 
 
 
