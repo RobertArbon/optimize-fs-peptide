@@ -128,6 +128,13 @@ if __name__ == "__main__":
     df2 = pd.DataFrame(data=data)
     all_trials = trials.merge(right=df2, how='outer', on='id')
 
+    print('trials shape : {}'.format(trials.shape))
+    print('df2 shape : {}'.format(df2.shape))
+    print('all_trials shape : {}'.format(all_trials.shape))
+    assert trials.shape[0] == all_trials.shape[0]
+    assert all_trials.shape[1] == df2.shape[1]+trials.shape[1]-1
+
+
     pd.to_pickle(all_trials, 'cse_trials.pickl')
 
 
