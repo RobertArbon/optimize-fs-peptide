@@ -92,11 +92,16 @@ def run_trial(trial_config):
         pipe = get_pipeline(trial_config['params'])
 
         train = [X[idx] for idx in train_idx]
-        pipe.fit(train)
-
-        train_n_timescales.append(pipe.named_steps['msm'].n_timescales)
-        train_gaps.append(pipe.named_steps['msm'].gap_)
-        train_scores.append(pipe.score(train))
+        try:
+            pipe.fit(train)
+            train_n_timescales.append(pipe.named_steps['msm'].n_timescales)
+            train_gaps.append(pipe.named_steps['msm'].gap_)
+            train_scores.append(pipe.score(train))
+        except:
+            print('Error in trial {} - setting results to None'.format(id_num))
+            train_n_timescales.append(None)
+            train_gaps.append(None)
+            train_scores.append(None)
 
         test = [X[idx] for idx in test_idx]
         try:
@@ -114,7 +119,6 @@ if __name__ == "__main__":
     np.random.seed(42)
     config = Config(config_path)
     trials = config.trial_results()
-    trials = trials.iloc[:2, :]
     trial_configs = [get_parameters(irow) for irow in trials.iterrows()]
 
     with Pool(4) as pool:
