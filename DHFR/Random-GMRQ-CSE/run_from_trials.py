@@ -16,9 +16,9 @@ from multiprocessing import Pool
 import pandas as pd
 
 # Globals
-config_path = '../../Trial Data/DHFR/Random-GMRQ-2/alpha_angle.yaml'
-db_path = '../../Trial Data/DHFR/Random-GMRQ-2/osprey-trials.db'
-traj_dir = '/home/robert/Datasets/DHFR/train'
+config_path = '../Random-GMRQ-2/alpha_angle.yaml'
+db_path = '../Random-GMRQ-2/osprey-trials.db'
+traj_dir = '/mnt/storage/home/ra15808/Datasets/DHFR/train'
 
 
 def get_pipeline(parameters):
@@ -82,7 +82,7 @@ def run_trial(trial_config):
 
     X = get_trajectories(trial_config['feature'])
     id_num = trial_config['id']
-
+    print('Running trial {}'.format(id_num))
     train_scores = []
     train_gaps = []
     train_n_timescales = []
@@ -114,10 +114,9 @@ if __name__ == "__main__":
     np.random.seed(42)
     config = Config(config_path)
     trials = config.trial_results()
-    trials = trials.iloc[:2, :]
     trial_configs = [get_parameters(irow) for irow in trials.iterrows()]
 
-    with Pool(4) as pool:
+    with Pool() as pool:
         results = list(pool.imap_unordered(run_trial, trial_configs))
 
     data = {'id': [x['id'] for x in results],
