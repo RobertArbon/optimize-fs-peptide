@@ -81,7 +81,7 @@ def get_parameters(irow):
 def run_trial(trial_config):
 
     X = get_trajectories(trial_config['feature'])
-    id = trial_config['id']
+    id_num = trial_config['id']
 
     train_scores = []
     train_gaps = []
@@ -105,7 +105,7 @@ def run_trial(trial_config):
             score = None
         test_scores.append(score)
 
-    results = {'id': id, 'cse_train_scores': train_scores, 'cse_train_gaps': train_gaps,
+    results = {'id': id_num, 'cse_train_scores': train_scores, 'cse_train_gaps': train_gaps,
                'cse_train_n_timescales': train_n_timescales, 'cse_test_scores': test_scores }
     return results
 
