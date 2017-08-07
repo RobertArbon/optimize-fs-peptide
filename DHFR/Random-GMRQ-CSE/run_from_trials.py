@@ -98,7 +98,7 @@ def run_trial(trial_config):
             train_gaps.append(pipe.named_steps['msm'].gap_)
             train_scores.append(pipe.score(train))
         except:
-            print('Error in trial {} - setting results to None'.format(id_num))
+            print('Error in training trial {} - setting results to None'.format(id_num))
             train_n_timescales.append(None)
             train_gaps.append(None)
             train_scores.append(None)
@@ -107,6 +107,7 @@ def run_trial(trial_config):
         try:
             score = pipe.score(test)
         except:
+            print('Error in test trial {} - setting results to None'.format(id_num))
             score = None
         test_scores.append(score)
 
