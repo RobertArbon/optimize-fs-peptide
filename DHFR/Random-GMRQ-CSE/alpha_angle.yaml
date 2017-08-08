@@ -37,8 +37,8 @@ cv:
 dataset_loader:
   name: numpy
   params:
-    filenames: ~/Datasets/DHFR/train/ppo_tor/trajectory-*.npy
+    filenames: ~/Datasets/DHFR/train/alpha_angle/trajectory-*.npy
 
 trials:
   uri: sqlite:///osprey-trials.db
-  project_name: ppo_tor
+  project_name: alpha_angle
