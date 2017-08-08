@@ -15,7 +15,7 @@ cd $SLURM_SUBMIT_DIR
 echo $SLURM_JOB_NODELIST
 echo $SLURM_JOB_CPUS_PER_NODE
 
-python run_from_trials.py 
+python problem.py 
  
 
 
