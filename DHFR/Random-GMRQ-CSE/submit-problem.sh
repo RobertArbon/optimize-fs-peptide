@@ -2,10 +2,8 @@
 #SBATCH --job-name=rand-cse
 #SBATCH --time=12:00:00
 #SBATCH --mem 20000
-##SBATCH -N 1                      # number of nodes
-##SBATCH -n 2                    # number of cores
 
-#SBATCH --cpus-per-task=10
+#SBATCH --cpus-per-task=28
 #SBATCH --ntasks=1
 
 #SBATCH -o slurm.%N.%j.out        # STDOUT

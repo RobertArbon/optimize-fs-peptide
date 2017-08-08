@@ -24,7 +24,7 @@ config_path = 'alpha_angle.yaml'
 db_path = 'osprey-trials.db'
 traj_dir = 'train'
 
-cv = ShuffleSplit(n_splits=2, test_size=0.5)
+cv = ShuffleSplit(n_splits=5, test_size=0.5)
 
 def get_pipeline(parameters):
     """
@@ -47,7 +47,7 @@ def get_trajectories(feat):
     :return: 
     """
     traj_paths = glob(join(traj_dir, feat, '*'))
-    trajs = [np.load(traj_path) for traj_path in traj_paths[:5]]
+    trajs = [np.load(traj_path) for traj_path in traj_paths]
     return trajs
 
 
@@ -75,7 +75,6 @@ def get_parameters(irow):
 
 def run_trial(trial_config):
 
-    # This could change:
     data_dir = trial_config['feature']
     X = get_trajectories(data_dir)
 
@@ -109,7 +108,6 @@ def run_trial(trial_config):
             score = None
         test_scores.append(score)
 
-    # Dummy result to show it's worked
     results = {'id': id_num, 'cse_train_scores': train_scores, 'cse_train_gaps': train_gaps,
                'cse_train_n_timescales': train_n_timescales, 'cse_test_scores': test_scores }
 
@@ -123,10 +121,13 @@ if __name__ == "__main__":
     config = Config(config_path)
     trials = config.trial_results()
     trials = trials.sort_values(by='mean_test_score',ascending=False)
-    trials = trials.iloc[:10,:]
+    trials = trials.iloc[:28,:]
     trial_configs = [get_parameters(irow) for irow in trials.iterrows()]
 
-    pool = Pool()
+    n_cpu=int(os.environ['SLURM_JOB_CPUS_PER_NODE'])
+    print('Number of cpus detected {}'.format(n_cpu))
+
+    pool = Pool(n_cpu)
     results = pool.imap_unordered(run_trial, trial_configs)
 
     results = list(results)
