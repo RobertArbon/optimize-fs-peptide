@@ -121,7 +121,8 @@ if __name__ == "__main__":
     config = Config(config_path)
     trials = config.trial_results()
     trials = trials.sort_values(by='mean_test_score',ascending=False)
-    trials = trials.iloc[:28,:]
+    # Select the top ten percent
+    trials = trials.iloc[:160,:]
     trial_configs = [get_parameters(irow) for irow in trials.iterrows()]
 
     n_cpu=int(os.environ['SLURM_JOB_CPUS_PER_NODE'])
@@ -153,7 +154,7 @@ if __name__ == "__main__":
     assert trials.shape[0] == all_trials.shape[0]
     assert all_trials.shape[1] == df2.shape[1]+trials.shape[1]-1
 
-    pd.to_pickle(all_trials, 'cse_trials.pickl')
+    pd.to_pickle(all_trials, 'cse_trials_0-159.pickl')
 
 
 
