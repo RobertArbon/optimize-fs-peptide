@@ -39,5 +39,5 @@ dataset_loader:
     filenames: ~/Datasets/Villin/train/alpha_angle/trajectory-*.npy
 
 trials:
-  uri: sqlite:///osprey-trials.db
+  uri: sqlite:///osprey-trials-cse.db
   project_name: alpha_angle
