@@ -13,7 +13,7 @@ strategy:
 
 search_space:
   tica__lag_time:
-    min: 1
+    min: 20
     max: 500
     type: int
     warp: log
