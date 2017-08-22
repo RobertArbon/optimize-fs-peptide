@@ -58,9 +58,12 @@ for i, row in best.iterrows():
     pipe.set_params(**params)
 
     # Get CV metrics
-    cv = ShuffleSplit(n_splits=50, test_size=0.5)
+    try:
+        cv = ShuffleSplit(n_splits=50, test_size=0.5)
 
-    test_scores = cross_val_score(pipe, trajs, cv=cv, n_jobs=num_procs, pre_dispatch=num_procs, verbose=1)
+        test_scores = cross_val_score(pipe, trajs, cv=cv, n_jobs=num_procs, pre_dispatch=num_procs, verbose=1)
+    except:
+        test_scores = [None]
 
     results['id'].append(row['id'])
     results['new_test_scores'].append(test_scores)
