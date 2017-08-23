@@ -12,8 +12,8 @@ from sklearn.model_selection import cross_val_score
 
 # Globals
 num_procs = 5
-# traj_dir = '/mnt/storage/home/ra15808/scratch/train'
-traj_dir = '/Users/robert_arbon/Datasets/DHFR/train'
+traj_dir = '/mnt/storage/home/ra15808/scratch/train'
+# traj_dir = '/Users/robert_arbon/Datasets/DHFR/train'
 
 # Pipelines
 pipe = Pipeline([
@@ -38,7 +38,7 @@ results['final_timescales'] = []
 # Loop:
 old_feature = 'none'
 for i, row in best.iterrows():
-
+    print('---Running {}---'.format(i))
     # Get dataset
     if row['feature'] != old_feature:
         traj_paths = glob(join(traj_dir, row['feature'], '*.npy'))
@@ -67,6 +67,13 @@ for i, row in best.iterrows():
             test_scores = [None]
 
         results['test_scores-{}'.format(n_ts)].append(test_scores)
+
+    # Now refit with all data and get all timescales
+
+    pipe.set_params(msm__n_timescales=None)
+    pipe.fit(trajs)
+    all_ts = pipe.named_steps['msm'].timescales_
+    results['final_timescales'].append(all_ts)
 
 new_results = pd.DataFrame(data=results)
 new_results = new_results.merge(right=best, on=['id','strategy'], how='inner')
