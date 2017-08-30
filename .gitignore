@@ -36,3 +36,7 @@ Analysis/DHFR/\.ipynb_checkpoints/
 DHFR/AdaptiveSampling/\.ipynb_checkpoints/
 
 *.pdf
+
+*.tga
+
+*.png

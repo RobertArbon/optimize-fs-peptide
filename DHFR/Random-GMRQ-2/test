@@ -1,0 +1,1919 @@
+==> alpha_angle.1.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 76, 'tica__n_components': 9, 'cluster__n_clusters': 777}
+(random took 0.003 s)
+
+
+==> alpha_angle.10.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 239, 'tica__n_components': 5, 'cluster__n_clusters': 537}
+(random took 0.003 s)
+
+
+==> alpha_angle.11.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 35, 'tica__n_components': 1, 'cluster__n_clusters': 101}
+(random took 0.003 s)
+
+MSM contains 2 strongly connected components above weight=0.02. Component 0 selected, with population 99.500000%
+
+==> alpha_angle.12.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 32, 'tica__n_components': 7, 'cluster__n_clusters': 263}
+(random took 0.003 s)
+
+
+==> alpha_angle.13.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 244, 'tica__n_components': 1, 'cluster__n_clusters': 752}
+(random took 0.003 s)
+
+MSM contains 2 strongly connected components above weight=0.02. Component 1 selected, with population 92.500000%
+
+==> alpha_angle.14.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 104, 'tica__n_components': 7, 'cluster__n_clusters': 337}
+(random took 0.003 s)
+
+MSM contains 17 strongly connected components above weight=0.02. Component 3 selected, with population 41.405789%
+
+==> alpha_angle.15.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 307, 'tica__n_components': 6, 'cluster__n_clusters': 897}
+(random took 0.003 s)
+
+
+==> alpha_angle.16.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 41, 'tica__n_components': 10, 'cluster__n_clusters': 591}
+(random took 0.003 s)
+
+
+==> alpha_angle.17.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 51, 'tica__n_components': 7, 'cluster__n_clusters': 416}
+(random took 0.003 s)
+
+
+==> alpha_angle.18.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 162, 'tica__n_components': 9, 'cluster__n_clusters': 847}
+(random took 0.003 s)
+
+
+==> alpha_angle.19.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 27, 'tica__n_components': 6, 'cluster__n_clusters': 364}
+(random took 0.003 s)
+
+
+==> alpha_angle.2.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 81, 'tica__n_components': 9, 'cluster__n_clusters': 544}
+(random took 0.003 s)
+
+
+==> alpha_angle.20.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 132, 'tica__n_components': 10, 'cluster__n_clusters': 414}
+(random took 0.003 s)
+
+
+==> alpha_angle.3.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 117, 'tica__n_components': 10, 'cluster__n_clusters': 653}
+(random took 0.003 s)
+
+
+==> alpha_angle.4.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 450, 'tica__n_components': 8, 'cluster__n_clusters': 719}
+(random took 0.003 s)
+
+
+==> alpha_angle.5.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 40, 'tica__n_components': 7, 'cluster__n_clusters': 128}
+(random took 0.003 s)
+
+
+==> alpha_angle.6.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 354, 'tica__n_components': 4, 'cluster__n_clusters': 990}
+(random took 0.003 s)
+
+
+==> alpha_angle.7.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 25, 'tica__n_components': 10, 'cluster__n_clusters': 512}
+(random took 0.003 s)
+
+
+==> alpha_angle.8.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 333, 'tica__n_components': 2, 'cluster__n_clusters': 371}
+(random took 0.003 s)
+
+MSM contains 3 strongly connected components above weight=0.02. Component 0 selected, with population 94.500000%
+
+==> alpha_angle.9.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 20, 'tica__n_components': 6, 'cluster__n_clusters': 960}
+(random took 0.003 s)
+
+
+==> kappa_angle.1.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             3 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 44 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 62, 'tica__n_components': 7, 'cluster__n_clusters': 189}
+(random took 0.026 s)
+
+
+==> kappa_angle.10.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 47 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 71, 'tica__n_components': 9, 'cluster__n_clusters': 446}
+(random took 0.020 s)
+
+
+==> kappa_angle.11.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 37 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 29, 'tica__n_components': 7, 'cluster__n_clusters': 185}
+(random took 0.003 s)
+
+
+==> kappa_angle.12.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 24 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 32, 'tica__n_components': 7, 'cluster__n_clusters': 263}
+(random took 0.003 s)
+
+
+==> kappa_angle.13.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 63 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 122, 'tica__n_components': 6, 'cluster__n_clusters': 654}
+(random took 0.024 s)
+
+
+==> kappa_angle.14.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             3 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 68 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 367, 'tica__n_components': 3, 'cluster__n_clusters': 232}
+(random took 0.029 s)
+
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+
+==> kappa_angle.15.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 51 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 307, 'tica__n_components': 6, 'cluster__n_clusters': 897}
+(random took 0.003 s)
+
+
+==> kappa_angle.16.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             5 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 77 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 22, 'tica__n_components': 10, 'cluster__n_clusters': 363}
+(random took 0.003 s)
+
+
+==> kappa_angle.17.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             4 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 75 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 101, 'tica__n_components': 2, 'cluster__n_clusters': 624}
+(random took 0.024 s)
+
+MSM contains 2 strongly connected components above weight=0.02. Component 0 selected, with population 99.500000%
+
+==> kappa_angle.18.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             9 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 88 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 125, 'tica__n_components': 8, 'cluster__n_clusters': 451}
+(random took 0.003 s)
+
+
+==> kappa_angle.19.log <==
+  File "/mnt/storage/home/ra15808/miniconda3/lib/python3.6/site-packages/msmbuilder-3.9.0.dev0-py3.6-linux-x86_64.egg/msmbuilder/decomposition/base.py", line 47, in fit
+    s.fit(self._concat(sequences))
+  File "/mnt/storage/home/ra15808/miniconda3/lib/python3.6/site-packages/sklearn/feature_selection/variance_threshold.py", line 64, in fit
+    X = check_array(X, ('csr', 'csc'), dtype=np.float64)
+  File "/mnt/storage/home/ra15808/miniconda3/lib/python3.6/site-packages/sklearn/utils/validation.py", line 407, in check_array
+    _assert_all_finite(array)
+  File "/mnt/storage/home/ra15808/miniconda3/lib/python3.6/site-packages/sklearn/utils/validation.py", line 58, in _assert_all_finite
+    " or a value too large for %r." % X.dtype)
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+------------------------------------------------------------------------------
+
+==> kappa_angle.2.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 36 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 76, 'tica__n_components': 3, 'cluster__n_clusters': 598}
+(random took 0.003 s)
+
+
+==> kappa_angle.20.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             7 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 85 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 154, 'tica__n_components': 10, 'cluster__n_clusters': 518}
+(random took 0.029 s)
+
+
+==> kappa_angle.3.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 34 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 113, 'tica__n_components': 6, 'cluster__n_clusters': 551}
+(random took 0.003 s)
+
+MSM contains 6 strongly connected components above weight=0.02. Component 2 selected, with population 64.500000%
+
+==> kappa_angle.4.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             6 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 50 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 182, 'tica__n_components': 3, 'cluster__n_clusters': 263}
+(random took 0.038 s)
+
+
+==> kappa_angle.5.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 35 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 38, 'tica__n_components': 3, 'cluster__n_clusters': 886}
+(random took 0.003 s)
+
+
+==> kappa_angle.6.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             3 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 45 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 366, 'tica__n_components': 10, 'cluster__n_clusters': 567}
+(random took 0.024 s)
+
+
+==> kappa_angle.7.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 24 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 25, 'tica__n_components': 10, 'cluster__n_clusters': 512}
+(random took 0.003 s)
+
+
+==> kappa_angle.8.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             2 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 34 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 492, 'tica__n_components': 5, 'cluster__n_clusters': 592}
+(random took 0.003 s)
+
+MSM contains 4 strongly connected components above weight=0.02. Component 1 selected, with population 94.000000%
+
+==> kappa_angle.9.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 24 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 20, 'tica__n_components': 6, 'cluster__n_clusters': 960}
+(random took 0.003 s)
+
+MSM contains 7 strongly connected components above weight=0.02. Component 0 selected, with population 51.503158%
+
+==> omega_tor.1.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 26 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 76, 'tica__n_components': 9, 'cluster__n_clusters': 777}
+(random took 0.003 s)
+
+MSM contains 2 strongly connected components above weight=0.02. Component 0 selected, with population 99.500000%
+
+==> omega_tor.10.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 239, 'tica__n_components': 5, 'cluster__n_clusters': 537}
+(random took 0.003 s)
+
+
+==> omega_tor.11.log <==
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 35, 'tica__n_components': 1, 'cluster__n_clusters': 101}
+(random took 0.003 s)
+
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+
+==> omega_tor.12.log <==
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 32, 'tica__n_components': 7, 'cluster__n_clusters': 263}
+(random took 0.003 s)
+
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+
+==> omega_tor.13.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 244, 'tica__n_components': 1, 'cluster__n_clusters': 752}
+(random took 0.003 s)
+
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+
+==> omega_tor.14.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 104, 'tica__n_components': 7, 'cluster__n_clusters': 337}
+(random took 0.003 s)
+
+
+==> omega_tor.15.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 307, 'tica__n_components': 6, 'cluster__n_clusters': 897}
+(random took 0.003 s)
+
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+
+==> omega_tor.16.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 41, 'tica__n_components': 10, 'cluster__n_clusters': 591}
+(random took 0.003 s)
+
+
+==> omega_tor.17.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 51, 'tica__n_components': 7, 'cluster__n_clusters': 416}
+(random took 0.007 s)
+
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+
+==> omega_tor.18.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 162, 'tica__n_components': 9, 'cluster__n_clusters': 847}
+(random took 0.003 s)
+
+
+==> omega_tor.19.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 27, 'tica__n_components': 6, 'cluster__n_clusters': 364}
+(random took 0.003 s)
+
+MSM contains 2 strongly connected components above weight=0.02. Component 0 selected, with population 99.500000%
+
+==> omega_tor.2.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 26 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 81, 'tica__n_components': 9, 'cluster__n_clusters': 544}
+(random took 0.003 s)
+
+
+==> omega_tor.20.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 132, 'tica__n_components': 10, 'cluster__n_clusters': 414}
+(random took 0.003 s)
+
+
+==> omega_tor.3.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 26 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 117, 'tica__n_components': 10, 'cluster__n_clusters': 653}
+(random took 0.003 s)
+
+
+==> omega_tor.4.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 26 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 450, 'tica__n_components': 8, 'cluster__n_clusters': 719}
+(random took 0.003 s)
+
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+
+==> omega_tor.5.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 40, 'tica__n_components': 7, 'cluster__n_clusters': 128}
+(random took 0.003 s)
+
+
+==> omega_tor.6.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 354, 'tica__n_components': 4, 'cluster__n_clusters': 990}
+(random took 0.003 s)
+
+
+==> omega_tor.7.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 25, 'tica__n_components': 10, 'cluster__n_clusters': 512}
+(random took 0.003 s)
+
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+
+==> omega_tor.8.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 333, 'tica__n_components': 2, 'cluster__n_clusters': 371}
+(random took 0.003 s)
+
+MSM contains 2 strongly connected components above weight=0.02. Component 0 selected, with population 99.500000%
+
+==> omega_tor.9.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 20, 'tica__n_components': 6, 'cluster__n_clusters': 960}
+(random took 0.003 s)
+
+
+==> phi-o_tor.1.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 76, 'tica__n_components': 9, 'cluster__n_clusters': 777}
+(random took 0.003 s)
+
+
+==> phi-o_tor.10.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 239, 'tica__n_components': 5, 'cluster__n_clusters': 537}
+(random took 0.003 s)
+
+
+==> phi-o_tor.11.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 35, 'tica__n_components': 1, 'cluster__n_clusters': 101}
+(random took 0.003 s)
+
+
+==> phi-o_tor.12.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 32, 'tica__n_components': 7, 'cluster__n_clusters': 263}
+(random took 0.023 s)
+
+
+==> phi-o_tor.13.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 244, 'tica__n_components': 1, 'cluster__n_clusters': 752}
+(random took 0.021 s)
+
+
+==> phi-o_tor.14.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 104, 'tica__n_components': 7, 'cluster__n_clusters': 337}
+(random took 0.027 s)
+
+
+==> phi-o_tor.15.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 307, 'tica__n_components': 6, 'cluster__n_clusters': 897}
+(random took 0.019 s)
+
+
+==> phi-o_tor.16.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 41, 'tica__n_components': 10, 'cluster__n_clusters': 591}
+(random took 0.020 s)
+
+
+==> phi-o_tor.17.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 51, 'tica__n_components': 7, 'cluster__n_clusters': 416}
+(random took 0.024 s)
+
+
+==> phi-o_tor.18.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 15 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 162, 'tica__n_components': 9, 'cluster__n_clusters': 847}
+(random took 0.034 s)
+
+
+==> phi-o_tor.19.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 27, 'tica__n_components': 6, 'cluster__n_clusters': 364}
+(random took 0.015 s)
+
+
+==> phi-o_tor.2.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 81, 'tica__n_components': 9, 'cluster__n_clusters': 544}
+(random took 0.055 s)
+
+
+==> phi-o_tor.20.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 132, 'tica__n_components': 10, 'cluster__n_clusters': 414}
+(random took 0.003 s)
+
+
+==> phi-o_tor.3.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 12 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 117, 'tica__n_components': 10, 'cluster__n_clusters': 653}
+(random took 0.049 s)
+
+
+==> phi-o_tor.4.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 450, 'tica__n_components': 8, 'cluster__n_clusters': 719}
+(random took 0.048 s)
+
+
+==> phi-o_tor.5.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 40, 'tica__n_components': 7, 'cluster__n_clusters': 128}
+(random took 0.031 s)
+
+
+==> phi-o_tor.6.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 354, 'tica__n_components': 4, 'cluster__n_clusters': 990}
+(random took 0.027 s)
+
+
+==> phi-o_tor.7.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 25, 'tica__n_components': 10, 'cluster__n_clusters': 512}
+(random took 0.020 s)
+
+
+==> phi-o_tor.8.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 333, 'tica__n_components': 2, 'cluster__n_clusters': 371}
+(random took 0.003 s)
+
+
+==> phi-o_tor.9.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 20, 'tica__n_components': 6, 'cluster__n_clusters': 960}
+(random took 0.014 s)
+
+
+==> phi_tor.1.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 26 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 76, 'tica__n_components': 9, 'cluster__n_clusters': 777}
+(random took 0.003 s)
+
+
+==> phi_tor.10.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 239, 'tica__n_components': 5, 'cluster__n_clusters': 537}
+(random took 0.003 s)
+
+
+==> phi_tor.11.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 35, 'tica__n_components': 1, 'cluster__n_clusters': 101}
+(random took 0.003 s)
+
+MSM contains 3 strongly connected components above weight=0.02. Component 1 selected, with population 65.000000%
+
+==> phi_tor.12.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 32, 'tica__n_components': 7, 'cluster__n_clusters': 263}
+(random took 0.003 s)
+
+
+==> phi_tor.13.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 244, 'tica__n_components': 1, 'cluster__n_clusters': 752}
+(random took 0.003 s)
+
+
+==> phi_tor.14.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 104, 'tica__n_components': 7, 'cluster__n_clusters': 337}
+(random took 0.003 s)
+
+
+==> phi_tor.15.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 307, 'tica__n_components': 6, 'cluster__n_clusters': 897}
+(random took 0.003 s)
+
+
+==> phi_tor.16.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 41, 'tica__n_components': 10, 'cluster__n_clusters': 591}
+(random took 0.003 s)
+
+
+==> phi_tor.17.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 51, 'tica__n_components': 7, 'cluster__n_clusters': 416}
+(random took 0.003 s)
+
+
+==> phi_tor.18.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 162, 'tica__n_components': 9, 'cluster__n_clusters': 847}
+(random took 0.003 s)
+
+
+==> phi_tor.19.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 27, 'tica__n_components': 6, 'cluster__n_clusters': 364}
+(random took 0.003 s)
+
+
+==> phi_tor.2.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 26 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 81, 'tica__n_components': 9, 'cluster__n_clusters': 544}
+(random took 0.003 s)
+
+
+==> phi_tor.20.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 132, 'tica__n_components': 10, 'cluster__n_clusters': 414}
+(random took 0.003 s)
+
+
+==> phi_tor.3.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 26 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 117, 'tica__n_components': 10, 'cluster__n_clusters': 653}
+(random took 0.003 s)
+
+
+==> phi_tor.4.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 26 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 450, 'tica__n_components': 8, 'cluster__n_clusters': 719}
+(random took 0.003 s)
+
+
+==> phi_tor.5.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 40, 'tica__n_components': 7, 'cluster__n_clusters': 128}
+(random took 0.003 s)
+
+MSM contains 4 strongly connected components above weight=0.02. Component 2 selected, with population 79.902105%
+
+==> phi_tor.6.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 354, 'tica__n_components': 4, 'cluster__n_clusters': 990}
+(random took 0.003 s)
+
+
+==> phi_tor.7.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 25, 'tica__n_components': 10, 'cluster__n_clusters': 512}
+(random took 0.003 s)
+
+
+==> phi_tor.8.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 333, 'tica__n_components': 2, 'cluster__n_clusters': 371}
+(random took 0.003 s)
+
+MSM contains 3 strongly connected components above weight=0.02. Component 0 selected, with population 69.000000%
+
+==> phi_tor.9.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 20, 'tica__n_components': 6, 'cluster__n_clusters': 960}
+(random took 0.003 s)
+
+
+==> pp_tor.1.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 76, 'tica__n_components': 9, 'cluster__n_clusters': 777}
+(random took 0.019 s)
+
+
+==> pp_tor.10.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 13 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 239, 'tica__n_components': 5, 'cluster__n_clusters': 537}
+(random took 0.003 s)
+
+
+==> pp_tor.11.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 13 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 35, 'tica__n_components': 1, 'cluster__n_clusters': 101}
+(random took 0.018 s)
+
+
+==> pp_tor.12.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 12 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 32, 'tica__n_components': 7, 'cluster__n_clusters': 263}
+(random took 0.003 s)
+
+
+==> pp_tor.13.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 244, 'tica__n_components': 1, 'cluster__n_clusters': 752}
+(random took 0.003 s)
+
+
+==> pp_tor.14.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 104, 'tica__n_components': 7, 'cluster__n_clusters': 337}
+(random took 0.003 s)
+
+
+==> pp_tor.15.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 307, 'tica__n_components': 6, 'cluster__n_clusters': 897}
+(random took 0.003 s)
+
+
+==> pp_tor.16.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 41, 'tica__n_components': 10, 'cluster__n_clusters': 591}
+(random took 0.003 s)
+
+
+==> pp_tor.17.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 51, 'tica__n_components': 7, 'cluster__n_clusters': 416}
+(random took 0.003 s)
+
+
+==> pp_tor.18.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 162, 'tica__n_components': 9, 'cluster__n_clusters': 847}
+(random took 0.003 s)
+
+
+==> pp_tor.19.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 27, 'tica__n_components': 6, 'cluster__n_clusters': 364}
+(random took 0.003 s)
+
+
+==> pp_tor.2.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 13 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 81, 'tica__n_components': 9, 'cluster__n_clusters': 544}
+(random took 0.003 s)
+
+
+==> pp_tor.20.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 132, 'tica__n_components': 10, 'cluster__n_clusters': 414}
+(random took 0.003 s)
+
+
+==> pp_tor.3.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 12 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 117, 'tica__n_components': 10, 'cluster__n_clusters': 653}
+(random took 0.003 s)
+
+
+==> pp_tor.4.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 13 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 450, 'tica__n_components': 8, 'cluster__n_clusters': 719}
+(random took 0.026 s)
+
+
+==> pp_tor.5.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 40, 'tica__n_components': 7, 'cluster__n_clusters': 128}
+(random took 0.015 s)
+
+
+==> pp_tor.6.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 13 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 354, 'tica__n_components': 4, 'cluster__n_clusters': 990}
+(random took 0.007 s)
+
+
+==> pp_tor.7.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 12 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 25, 'tica__n_components': 10, 'cluster__n_clusters': 512}
+(random took 0.003 s)
+
+
+==> pp_tor.8.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 13 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 333, 'tica__n_components': 2, 'cluster__n_clusters': 371}
+(random took 0.007 s)
+
+
+==> pp_tor.9.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 20, 'tica__n_components': 6, 'cluster__n_clusters': 960}
+(random took 0.038 s)
+
+
+==> psi-o_tor.1.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 76, 'tica__n_components': 9, 'cluster__n_clusters': 777}
+(random took 0.003 s)
+
+
+==> psi-o_tor.10.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 239, 'tica__n_components': 5, 'cluster__n_clusters': 537}
+(random took 0.003 s)
+
+
+==> psi-o_tor.11.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 35, 'tica__n_components': 1, 'cluster__n_clusters': 101}
+(random took 0.003 s)
+
+
+==> psi-o_tor.12.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 32, 'tica__n_components': 7, 'cluster__n_clusters': 263}
+(random took 0.003 s)
+
+
+==> psi-o_tor.13.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 244, 'tica__n_components': 1, 'cluster__n_clusters': 752}
+(random took 0.003 s)
+
+
+==> psi-o_tor.14.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 104, 'tica__n_components': 7, 'cluster__n_clusters': 337}
+(random took 0.003 s)
+
+
+==> psi-o_tor.15.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 307, 'tica__n_components': 6, 'cluster__n_clusters': 897}
+(random took 0.003 s)
+
+
+==> psi-o_tor.16.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 41, 'tica__n_components': 10, 'cluster__n_clusters': 591}
+(random took 0.003 s)
+
+
+==> psi-o_tor.17.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 51, 'tica__n_components': 7, 'cluster__n_clusters': 416}
+(random took 0.003 s)
+
+
+==> psi-o_tor.18.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 162, 'tica__n_components': 9, 'cluster__n_clusters': 847}
+(random took 0.003 s)
+
+
+==> psi-o_tor.19.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 27, 'tica__n_components': 6, 'cluster__n_clusters': 364}
+(random took 0.003 s)
+
+
+==> psi-o_tor.2.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 81, 'tica__n_components': 9, 'cluster__n_clusters': 544}
+(random took 0.003 s)
+
+
+==> psi-o_tor.20.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 132, 'tica__n_components': 10, 'cluster__n_clusters': 414}
+(random took 0.003 s)
+
+
+==> psi-o_tor.3.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 117, 'tica__n_components': 10, 'cluster__n_clusters': 653}
+(random took 0.003 s)
+
+
+==> psi-o_tor.4.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 450, 'tica__n_components': 8, 'cluster__n_clusters': 719}
+(random took 0.003 s)
+
+
+==> psi-o_tor.5.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 40, 'tica__n_components': 7, 'cluster__n_clusters': 128}
+(random took 0.003 s)
+
+
+==> psi-o_tor.6.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 354, 'tica__n_components': 4, 'cluster__n_clusters': 990}
+(random took 0.003 s)
+
+
+==> psi-o_tor.7.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 25, 'tica__n_components': 10, 'cluster__n_clusters': 512}
+(random took 0.003 s)
+
+
+==> psi-o_tor.8.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 333, 'tica__n_components': 2, 'cluster__n_clusters': 371}
+(random took 0.003 s)
+
+
+==> psi-o_tor.9.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 20, 'tica__n_components': 6, 'cluster__n_clusters': 960}
+(random took 0.003 s)
+
+
+==> psi_tor.1.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 76, 'tica__n_components': 9, 'cluster__n_clusters': 777}
+(random took 0.003 s)
+
+MSM contains 11 strongly connected components above weight=0.02. Component 0 selected, with population 63.776316%
+
+==> psi_tor.10.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 239, 'tica__n_components': 5, 'cluster__n_clusters': 537}
+(random took 0.003 s)
+
+MSM contains 6 strongly connected components above weight=0.02. Component 2 selected, with population 69.500000%
+
+==> psi_tor.11.log <==
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 35, 'tica__n_components': 1, 'cluster__n_clusters': 101}
+(random took 0.003 s)
+
+MSM contains 2 strongly connected components above weight=0.02. Component 0 selected, with population 89.246316%
+MSM contains 1 strongly connected component above weight=0.02. Component 0 selected, with population 100.000000%
+MSM contains 2 strongly connected components above weight=0.02. Component 0 selected, with population 89.246316%
+
+==> psi_tor.12.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 32, 'tica__n_components': 7, 'cluster__n_clusters': 263}
+(random took 0.003 s)
+
+MSM contains 6 strongly connected components above weight=0.02. Component 1 selected, with population 87.500000%
+
+==> psi_tor.13.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 244, 'tica__n_components': 1, 'cluster__n_clusters': 752}
+(random took 0.003 s)
+
+MSM contains 2 strongly connected components above weight=0.02. Component 0 selected, with population 99.500000%
+
+==> psi_tor.14.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 104, 'tica__n_components': 7, 'cluster__n_clusters': 337}
+(random took 0.003 s)
+
+MSM contains 11 strongly connected components above weight=0.02. Component 2 selected, with population 46.048947%
+
+==> psi_tor.15.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 307, 'tica__n_components': 6, 'cluster__n_clusters': 897}
+(random took 0.003 s)
+
+MSM contains 11 strongly connected components above weight=0.02. Component 1 selected, with population 35.500000%
+
+==> psi_tor.16.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 41, 'tica__n_components': 10, 'cluster__n_clusters': 591}
+(random took 0.003 s)
+
+MSM contains 18 strongly connected components above weight=0.02. Component 2 selected, with population 55.865263%
+
+==> psi_tor.17.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 51, 'tica__n_components': 7, 'cluster__n_clusters': 416}
+(random took 0.003 s)
+
+MSM contains 10 strongly connected components above weight=0.02. Component 0 selected, with population 47.610526%
+
+==> psi_tor.18.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 162, 'tica__n_components': 9, 'cluster__n_clusters': 847}
+(random took 0.003 s)
+
+
+==> psi_tor.19.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 27, 'tica__n_components': 6, 'cluster__n_clusters': 364}
+(random took 0.003 s)
+
+MSM contains 8 strongly connected components above weight=0.02. Component 0 selected, with population 95.418421%
+
+==> psi_tor.2.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 81, 'tica__n_components': 9, 'cluster__n_clusters': 544}
+(random took 0.004 s)
+
+MSM contains 18 strongly connected components above weight=0.02. Component 2 selected, with population 31.053684%
+
+==> psi_tor.20.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 14 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 132, 'tica__n_components': 10, 'cluster__n_clusters': 414}
+(random took 0.003 s)
+
+MSM contains 13 strongly connected components above weight=0.02. Component 0 selected, with population 51.886842%
+
+==> psi_tor.3.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 117, 'tica__n_components': 10, 'cluster__n_clusters': 653}
+(random took 0.003 s)
+
+MSM contains 14 strongly connected components above weight=0.02. Component 0 selected, with population 41.130000%
+
+==> psi_tor.4.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 450, 'tica__n_components': 8, 'cluster__n_clusters': 719}
+(random took 0.004 s)
+
+MSM contains 12 strongly connected components above weight=0.02. Component 0 selected, with population 75.133158%
+
+==> psi_tor.5.log <==
+
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 40, 'tica__n_components': 7, 'cluster__n_clusters': 128}
+(random took 0.003 s)
+
+
+==> psi_tor.6.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 354, 'tica__n_components': 4, 'cluster__n_clusters': 990}
+(random took 0.003 s)
+
+MSM contains 6 strongly connected components above weight=0.02. Component 1 selected, with population 85.500000%
+
+==> psi_tor.7.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 25, 'tica__n_components': 10, 'cluster__n_clusters': 512}
+(random took 0.003 s)
+
+MSM contains 16 strongly connected components above weight=0.02. Component 4 selected, with population 54.332632%
+
+==> psi_tor.8.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 333, 'tica__n_components': 2, 'cluster__n_clusters': 371}
+(random took 0.003 s)
+
+MSM contains 2 strongly connected components above weight=0.02. Component 0 selected, with population 70.500000%
+
+==> psi_tor.9.log <==
+----------------------------------------------------------------------
+Beginning iteration                                             1 / 10
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 10 trials
+Choosing next hyperparameters with random...
+  {'tica__lag_time': 20, 'tica__n_components': 6, 'cluster__n_clusters': 960}
+(random took 0.003 s)
+
+MSM contains 14 strongly connected components above weight=0.02. Component 2 selected, with population 39.486842%
