@@ -21,8 +21,10 @@ if new_n_timescales is None:
 
 # Globals
 num_procs = 5 # Should pick this up from Slurm E-V.
-traj_dir = '/mnt/storage/home/ra15808/scratch/train'
+#traj_dir = '/mnt/storage/home/ra15808/scratch/train'
+traj_dir = '/panfs/panasas01/chem/ra15808/Datasets/DHFR/train'
 # traj_dir = '/Users/robert_arbon/Datasets/DHFR/train'
+
 trial_db = 'best_trials.pickl'
 output_db = trial_db.split('.')[0]+'-'+str(new_n_timescales)+'.pickl'
 
@@ -68,7 +70,7 @@ for i, row in best.iterrows():
         test_scores = cross_val_score(pipe, trajs, cv=cv, n_jobs=num_procs, pre_dispatch=num_procs, verbose=1)
     except:
         test_scores = [None]
-
+    print(test_scores)
     results['test_scores-{}'.format(new_n_timescales)].append(test_scores)
 
 # Save results

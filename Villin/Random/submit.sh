@@ -1,16 +1,21 @@
 #!/bin/bash
-#PBS -j oe
-#PBS -l nodes=1:ppn=8
-#PBS -l walltime=36:00:00
-#PBS -m a
+#SBATCH --array=1-20
+#SBATCH --time=48:10:00
+#SBATCH --ntasks=1
+#SBATCH --mem-per-cpu=4000
 
-n_trials=25
-cd $PBS_O_WORKDIR
-NO_OF_CORES=`cat $PBS_NODEFILE | egrep -v '^#'\|'^$' | wc -l | awk '{print $1}'`
-source activate ml4dyn
-f=xxx
-for i in `seq $NO_OF_CORES`; do
-    osprey worker $f -n $n_trials --seed $i > $f-$i-$PBS_JOBID.log 2>&1 &
-done
-wait
+export MKL_NUM_THREADS=1
+export NUMEXPR_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+
+cd $SLURM_SUBMIT_DIR
+echo Running on host `hostname`
+echo Time is `date`
+echo Directory is `pwd`
+echo SLURM job ID is $SLURM_JOBID
+echo This jobs runs on the following machines:
+echo $SLURM_JOB_NODELIST
+
+osprey worker $config.yaml -n $num -j 1 --seed $SLURM_ARRAY_TASK_ID > $config.$SLURM_ARRAY_TASK_ID.log 2>&1 
+
 
