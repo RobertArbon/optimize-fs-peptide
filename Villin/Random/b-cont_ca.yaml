@@ -19,7 +19,7 @@ search_space:
     type: float
 
   tica__lag_time:
-    min: 1
+    min: 10
     max: 250
     type: int
     warp: log
@@ -43,8 +43,8 @@ cv:
 dataset_loader:
   name: mdtraj
   params:
-    trajectories: ~/Datasets/Villin/train/trajectory-*.xtc
-    topology: ~/Datasets/Villin/train/top_prot.pdb
+    trajectories: ~/scatch/Villin/train/trajectory-*.xtc
+    topology: ~/scratch/Villin/train/top_prot.pdb
     stride: 1
 
 

@@ -13,7 +13,7 @@ strategy:
 
 search_space:
   tica__lag_time:
-    min: 1
+    min: 10
     max: 250
     type: int
     warp: log
@@ -37,7 +37,7 @@ cv:
 dataset_loader:
   name: numpy
   params:
-    filenames: ~/Datasets/Villin/train/ppo_tor/trajectory-*.npy
+    filenames: ~/scratch/Villin/train/ppo_tor/trajectory-*.npy
 
 trials:
   uri: sqlite:///osprey-trails.db

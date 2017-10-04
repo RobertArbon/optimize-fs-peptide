@@ -5,16 +5,28 @@ estimator:
       Pipeline([ ('variance_cut', VarianceThreshold()),
                  ('tica', tICA(kinetic_mapping=True)),
                  ('cluster', MiniBatchKMeans()),
-                 ('msm', MarkovStateModel(n_timescales=2, lag_time=25, verbose=False))])
+                 ('msm', MarkovStateModel(n_timescales=2, lag_time=50, verbose=True))])
   eval_scope: msmbuilder
 
 strategy:
-  name: random
+  name: gp
+  params:
+    seeds: 20
+    kernels:
+      - { name : GPy.kern.Exponential, params : {ARD : False}, options : {independent : True} }
+      - { name : GPy.kern.White, params : {}, options : {independent : False} }
+    acquisition: { name : ei, params : {}}
 
 search_space:
+  variance_cut__threshold:
+    min: 1e-4
+    max: 1e-1
+    type: float
+    warp: log
+
   tica__lag_time:
-    min: 10
-    max: 250
+    min: 20
+    max: 500
     type: int
     warp: log
 
@@ -37,8 +49,8 @@ cv:
 dataset_loader:
   name: numpy
   params:
-    filenames: ~/scratch/Villin/train/alpha_angle/trajectory-*.npy
+    filenames: ~/Datasets/DHFR/train/alpha_angle/trajectory-*.npy
 
 trials:
-  uri: sqlite:///osprey-trails.db
+  uri: sqlite:///osprey-trials.db
   project_name: alpha_angle

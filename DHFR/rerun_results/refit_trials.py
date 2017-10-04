@@ -16,8 +16,10 @@ Refits trials with all the data and records the timescales.
 """
 
 # Globals
-traj_dir = '/mnt/storage/home/ra15808/scratch/train'
+#traj_dir = '/mnt/storage/home/ra15808/scratch/train'
 # traj_dir = '/Users/robert_arbon/Datasets/DHFR/train'
+traj_dir = '/panfs/panasas01/chem/ra15808/Datasets/DHFR/train'
+
 trial_db = 'best_trials.pickl'
 output_db = trial_db.split('.')[0]+'-'+'all_ts'+'.pickl'
 
