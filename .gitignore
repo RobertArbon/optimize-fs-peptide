@@ -21,3 +21,5 @@
 *.p
 .DS_Store
 **/.ipynb_checkpoints/**
+*Icon$'\r'
+*.csv
