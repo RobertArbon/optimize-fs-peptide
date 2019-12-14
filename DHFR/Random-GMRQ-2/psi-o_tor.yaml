@@ -1,0 +1,44 @@
+# osprey configuration file.
+
+estimator:
+  eval: |
+      Pipeline([ ('variance_cut', VarianceThreshold()),
+                 ('tica', tICA(kinetic_mapping=True)),
+                 ('cluster', MiniBatchKMeans()),
+                 ('msm', MarkovStateModel(n_timescales=2, lag_time=50, verbose=True))])
+  eval_scope: msmbuilder
+
+strategy:
+  name: random
+
+search_space:
+  tica__lag_time:
+    min: 20
+    max: 500
+    type: int
+    warp: log
+
+  tica__n_components:
+    min: 1
+    max: 10
+    type: int
+
+  cluster__n_clusters:
+    min: 10
+    max: 1000
+    type: int
+
+cv:
+    name: shufflesplit
+    params:
+      n_splits: 5
+      test_size: 0.5
+
+dataset_loader:
+  name: numpy
+  params:
+    filenames: ~/Datasets/DHFR/train/psi-o_tor/trajectory-*.npy
+
+trials:
+  uri: sqlite:///osprey-trials.db
+  project_name: psi-o_tor

@@ -1,0 +1,30 @@
+estimator:
+  entry_point: sklearn.svm.SVC
+
+strategy:
+  name: sobol
+
+search_space:
+  C:
+    min: 0.1
+    max: 10
+    type: float
+
+  gamma:
+    min: 1e-5
+    max: 1
+    type: float
+    warp: log
+
+cv: 5
+
+dataset_loader:
+  name: sklearn_dataset
+  params:
+    method: load_digits
+
+trials:
+    uri: sqlite:///osprey-trials.db
+    project_name: trial2
+
+random_seed: 42
