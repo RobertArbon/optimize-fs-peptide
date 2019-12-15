@@ -1,0 +1,155 @@
+c4dd9a0 updated readme to reflect the provenance of the fs-peptide work..
+46e01b2 added new figures directory and ignoring csvs and Icon files
+321ba78 pull from remote into this version because it contains more files
+4ae21cd ignoring checkpoints
+739dfa7 created READMD
+be7b201 remoted DS_store from tree and updated gitignore
+8d0d98d purge of everything except fs-peptide
+a6a5090 reverting to push changes to bitbucket
+6821d22 Purge of everything except fs-peptide:
+60eae81 Added all of the QuadWell directory
+b0c4340 Added double well notebook
+548f67d ignoring pickle files
+ed3be55 ignoring h5 files
+9c56852 Removing idea file and useless symlink
+8a55bca Clean up, merging and the config files for GP
+8e4cc9e Changes to figures workbooks
+0e1a75d Merge branch 'master' of bitbucket.org:RobertArbon/hyperparamopt
+b162143 Clean up of file structure
+771f03b Added changes to various figure workbooks for paper
+0b10755 Merge branch 'master' of bitbucket.org:RobertArbon/hyperparamopt
+0c3eeeb merged upstream
+73def04 Added extra charts and better timescale analysis@
+e6bbd19 merged new files
+5a0bde9 Changes to analysis notebooks
+8297abc Merge branch 'master' of bitbucket.org:RobertArbon/hyperparamopt
+4b20b41 submit files for GP
+2eef0e0 Merge remote-tracking branch 'origin/master'
+bbae213 GP for CSP
+6ad0e31 fixed conflict in rescore_trials.py@
+35a7333 submit files for GP and changes to config files for Random-CSE
+1c35649 Added GP cofig files for M52 GMRQ2
+c0333ce New sample_db produces multiple subsamples
+4241886 Got choose_kernel working.
+45eacb2 Changed refitting scripts so that they can be run independently.
+a9fbf50 added all_timescales to rerun script
+2cde750 Got validation workbooks working as well as a semi-decent re-run script
+fa88e1f Added error checking
+30a58bd Added method to save results.
+28da1fa Added file to re-run results
+7174926 This adds the config files for extracting database results
+58833ff changed trial results notebook to reflect different methodology
+eed5b49 Added variance threshold as a hyperparameter
+1878087 GP analysis
+fe9a622 Changed lag-time minimum to 20 to avoid numerical sampling problems.
+dfd9ca4 Added GP config files for GMRQ-CSE
+a5aec98 Added GP config files for DHFR for GMRQ-2
+42b33c8 Merge branch 'master' of bitbucket.org:RobertArbon/hyperparamopt
+080bd23 run_cse.py is now the main program for rerunning results
+9d551ed added trials data because I'm desperate to move it off this computer
+5611dca Merge branch 'master' of bitbucket.org:RobertArbon/hyperparamopt
+a8f6a30 Slight change to trial results
+10b8866 Problem.py works with 28 nodes
+b2b1a07 problem.py seems to have resolved the problem
+70b24b0 small addition to error checking code
+ca27672 Merge branch 'master' of bitbucket.org:RobertArbon/hyperparamopt
+863918b changed directory locations for bc4
+b1b9555 Error checking code for run_from_trials
+b576b9e Merge branch 'master' of bitbucket.org:RobertArbon/hyperparamopt
+32863d7 changed name of id variabl
+4fdd142 Merge branch 'master' of bitbucket.org:RobertArbon/hyperparamopt
+81693fa Added submit files for running on BCp4
+43492a0 added some error checking for merge
+27c6bd6 minor typo@
+181cee3 Got run_from_trials working
+c11e408 Added test workbook for run from trials
+4b7a3c3 can't fit pipeline yet
+f49054d run_from_trials correctly gets old trial data
+a6f2954 Current best model and trial workbooks up and running
+d0642ed Fixed typos in Random directory
+30a3ad2 Fixed typos
+ab1cd10 Data analysis files
+ed68e96 DHFR general config files
+58cff5e DHFR config files
+2613814 Fixed some typos
+b24d0ef Merge remote-tracking branch 'origin/master'
+0b9e88e Changed config files
+8cffa73 Merge branch 'master' of bitbucket.org:RobertArbon/hyperparamopt
+66bd6a6 Added Adaptive Sampling submit files
+0cb6158 Added CSE directory.
+104c64b Merge remote-tracking branch 'origin/master'
+2ed4b91 Formatting changes
+63a0fda Merge branch 'master' of ssh://bitbucket.org/RobertArbon/hyperparamopt
+3106120 Deleted config2 file
+f227f64 GP config files
+5324455 Merge remote-tracking branch 'origin/master'
+ec1204c Added tica-lag log scale submit scripts
+e7e2b44 database sampler is working
+4a6d127 merged in files for variable importance and tica log lag time runs
+47ce797 re-ran Random and Sobol and changes to AS for DHFR
+0e29217 Sobol with log tical lag time config files
+4705f15 log scale for tica and random
+ba80693 Made base config files with numpy file loader
+9a203de Most of variable importance notebook finished.
+4f504ae Delete unviable features
+563e57e Started to Variable Importance Analysis
+0fbb0da Added util function and some AdaptiveSampling tests
+a8aef8f Merge branch 'master' of ssh://bitbucket.org/RobertArbon/hyperparamopt
+8340f9d Changed Adaptive Sampling config file
+1aebd66 Merge branch 'master' of ssh://bitbucket.org/RobertArbon/hyperparamopt
+a2cd064 Started utility function for counting trials
+c22414d Merge branch 'master' of ssh://bitbucket.org/RobertArbon/hyperparamopt
+4654eda DHFR config files
+d658b93 Merge branch 'master' of bitbucket.org:RobertArbon/hyperparamopt
+a666907  added final results of fs-peptide work
+70590b4 Merge branch 'master' of ssh://bitbucket.org/RobertArbon/hyperparamopt
+b1094ea Made sobol config files
+ac21866 Merge branch 'master' of ssh://bitbucket.org/RobertArbon/hyperparamopt
+3230675 Fixed typo in DRID config file
+9d2a41a Added submit files
+88a6cdd Changed config files to reflect new data stride of 2ns
+cc46065 Added n_timescales to MSM step
+cbbfa2d Fixed missing eval_scope in config file
+da4ac83 Merge remote-tracking branch 'origin/master'
+c3e4c6d Added Villin config files for Random
+efe36a5 Merge branch 'master' of ssh://bitbucket.org/RobertArbon/hyperparamopt
+641821e Changed submit files for tpe
+42ca605 Added Villin dataset downloader
+f7ed43f Made gp config files and models
+bdfa2cb Checked wether dims in ss's are independent
+73b8f1f Changed config files to fix erroneous deletions
+e79e582 changed submit script for sobol
+62918c0 Made sobol config files
+42edfb7 Merge remote-tracking branch 'origin/master'
+3e32eec Sobol test cases.
+4b59c0a Rand random and TPE jobs for first 5 descriptors
+88928e5 Added msm_functions to the project
+511cf1e Merge branch 'master' of ssh://bitbucket.org/RobertArbon/hyperparamopt
+800ac73 Made change to typo in config file
+80a1eb5 Got TPE files sorted.
+2d4fbfd Merge remote-tracking branch 'origin/master'
+839f559 Added TPE folder
+e9c788c Changed database project names
+a07f1d4 Updated gitignore file
+342ca7e Merge branch 'master' of ssh://bitbucket.org/RobertArbon/hyperparamopt
+2840e04 submit files and changes to config files for trajectory directories
+13f45f9 Added Random method individual config files
+3f76927 Pulled random examplexs
+3656ad5 Got random example working (take 2)
+d4b08bf Got random example working finally.
+d61eb84 Started building Osprey Model Function
+c82a370 Featurizer notebook
+1f4e28e Changed gitignore
+e08abbb initial commit
+8a90a8a Updated config but it's not working again...
+7159db0 Some minor changes to reflect some testing
+5ab8b7f Config file not working with Featurizer.
+7628bc3 Config file not working
+75bdaa3 Merge branch 'OspreyTesting'
+fa20ad5 Written short pipeline  - needs testing
+df4e59a Figured out bonds and bond angles.
+97211a2 Got HBondsFeaturizer working with a new feature extractor
+b3b059f Explored Hydrogen Bond feature
+3187316 Got config.yaml file working
+04c3857 Data file setup
+d856a73 Initial commit
