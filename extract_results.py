@@ -46,7 +46,8 @@ df_all.head()
 # In[67]:
 
 
-df = df_all.loc[:, ['parameters', 'project_name','mean_test_score', 'mean_train_score', 'test_scores', 'train_scores', 'method', 'completed']]
+df = df_all.loc[:, ['parameters', 'project_name','mean_test_score', 'mean_train_score',
+                    'test_scores', 'train_scores', 'method', 'completed']]
 df.rename(columns={'project_name':'basis'}, inplace=True)
 
 
@@ -65,5 +66,5 @@ for param in params:
 # In[6]:
 
 
-df.to_csv('./data/all_methods_results.csv')
+df.to_csv('./data/all_methods_results.csv', index=False)
 
