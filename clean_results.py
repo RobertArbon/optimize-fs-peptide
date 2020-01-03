@@ -39,17 +39,24 @@ df_all.loc[:, 'train_scores'] = df_all.loc[:, 'train_scores'].apply(func=to_floa
 # In[68]:
 
 
-df_all['var_test_scores'] = df_all['test_scores'].apply(np.var)
-df_all['var_train_scores'] = df_all['train_scores'].apply(np.var)
+df_all['var_test_score'] = df_all['test_scores'].apply(np.var)
+df_all['var_train_score'] = df_all['train_scores'].apply(np.var)
 
+df_all['min_test_score'] = df_all['test_scores'].apply(np.min)
+df_all['max_test_score'] = df_all['test_scores'].apply(np.max)
+
+df_all['min_train_score'] = df_all['train_scores'].apply(np.min)
+df_all['max_train_score'] = df_all['train_scores'].apply(np.max)
 
 # Extract only relevant columns
 
 # In[71]:
 
 
-df = df_all.loc[:, ['method', 'mean_test_score', 'var_test_scores', 'mean_train_score', 'var_train_scores', 
-               'basis','lag_time', 'n_components', 'n_clusters']]
+df = df_all.loc[:, ['method',
+                    'mean_test_score', 'min_test_score', 'max_test_score', 'var_test_score',
+                    'mean_train_score', 'min_train_score', 'max_train_score', 'var_train_score',
+                    'basis','lag_time', 'n_components', 'n_clusters']]
 
 
 # In[72]:

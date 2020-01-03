@@ -35,7 +35,6 @@ common_bases = set(bases[0][1])
 for k, v in bases:
     common_bases = common_bases & v
 common_bases = list(common_bases)
-common_bases
 
 
 # Keep only these bases
