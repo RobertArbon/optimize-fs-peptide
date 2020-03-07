@@ -26,7 +26,7 @@ from sklearn.model_selection import KFold
 from sklearn import preprocessing
 
 # Globals
-basis = 'all_tor'
+basis = 'ppo_tor'
 
 # Import data
 df = pd.read_csv('results/all_results_average.csv')
